@@ -116,6 +116,13 @@ const mods = [
     mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E",
     torrentLink:"torrents",
     tags: ["Private server", "Offline"]
+  },
+  {
+    name: "Multi Brawl",
+    description: "A modified version of V47 that replaces ALL the brawlers will new onez.",
+    mirrorLink: "https://drive.google.com/file/d/1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1/view?usp=drivesdk",
+    torrentLink:"torrents",
+    tags: ["Private server", "Offline"]
   }
 ]
 
