@@ -109,6 +109,13 @@ const mods = [
     mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04",
     torrentLink:"torrents",
     tags: ["Private server", "Offline"]
+  },
+  {
+    name: "Mechaoffline",
+    description: "An offline version of V19.",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E",
+    torrentLink:"torrents",
+    tags: ["Private server", "Offline"]
   }
 ]
 
