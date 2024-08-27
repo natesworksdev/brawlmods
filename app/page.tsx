@@ -87,14 +87,14 @@ const mods = [
     description: "All brawlers unlocked and maxed out. Attempts to recreate brawlers from newer versions of the game.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs",
     torrentLink:"torrents",
-    tags: ["Official server"]
+    tags: ["Private server", "Offline"]
   },
   {
     name: "TomatoBrawlOG",
     description: "Adds 4 new brawlers - Melee bot, mouse bot, ranged bot and boss bot! Based on Beta Brawl (V11).",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04",
     torrentLink:"torrents",
-    tags: ["Official server"]
+    tags: ["Private server", "Offline"]
   }
 ]
 
