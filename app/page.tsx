@@ -120,10 +120,18 @@ const mods = [
   {
     name: "Multi Brawl",
     description: "A modified version of V47 that replaces ALL the brawlers will new onez.",
-    mirrorLink: "https://drive.google.com/file/d/1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1/view?usp=drivesdk",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1",
+    torrentLink:"torrents",
+    tags: ["Private server", "Offline"]
+  },
+  {
+    name: "Brawl Mod Beta",
+    description: "Offline version of V11",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO",
     torrentLink:"torrents",
     tags: ["Private server", "Offline"]
   }
+
 ]
 
 export default function Home() {
