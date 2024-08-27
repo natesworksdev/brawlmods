@@ -76,6 +76,20 @@ const mods = [
     tags: ["Private server", "Selfhosted", "Offline"]
   },
   {
+    name: "BSDS v41 Client",
+    description: "Selfhost your own V41 private server.",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8",
+    torrentLink:"torrents",
+    tags: ["Private server", "Selfhosted", "Offline"]
+  },
+  {
+    name: "BSDS v41 Server",
+    description: "Brawl stars V41 server made from scratch!",
+    mirrorLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk",
+    torrentLink:"torrents",
+    tags: ["Private server", "Selfhosted", "Offline"]
+  },
+  {
     name: "Infinity Reverse Brawl",
     description: "All characters unlocked and third star powers added for some brawlers and new skins.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX",
