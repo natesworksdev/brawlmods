@@ -119,7 +119,7 @@ const mods = [
   },
   {
     name: "Multi Brawl",
-    description: "A modified version of V47 that replaces ALL the brawlers will new onez.",
+    description: "A modified version of V47 that replaces ALL the brawlers will new ones.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1",
     torrentLink:"torrents",
     tags: ["Private server", "Offline"]
