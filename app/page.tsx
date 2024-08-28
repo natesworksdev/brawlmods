@@ -1,7 +1,11 @@
+'use client'
+
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DownloadIcon, MagnetIcon, MailIcon, MessageCircleIcon } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 
 const mods = [
