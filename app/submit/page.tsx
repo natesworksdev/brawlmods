@@ -1,6 +1,5 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 
@@ -13,23 +12,18 @@ export default function GoogleFormPage() {
           Submit a mod to be published on our website.
         </p>
         <div className="max-w-4xl mx-auto">
-          <Card className="hover:shadow-lg transition-shadow duration-300">
-            <CardHeader>
-            </CardHeader>
-            <CardContent>
-              <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfm_ck5gkRyiXl9labtuM7l1c1U7wUExrzelMa4PWXOVI8RPg/viewform?embedded=true" 
-                width="100%"
-                height="750"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                className="rounded-lg shadow-md"
-              >
-                Loading…
-              </iframe>
-            </CardContent>
-          </Card>
+          
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfm_ck5gkRyiXl9labtuM7l1c1U7wUExrzelMa4PWXOVI8RPg/viewform?embedded=true" 
+            width="100%"
+            height="750"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            className="rounded-lg shadow-md"
+          >
+            Loading…
+          </iframe>
         </div>
       </main>
       <footer className="w-full py-6 bg-muted mt-8">
