@@ -44,7 +44,7 @@ export default function ModSubmissionForm() {
               <textarea 
                 id="modDescription" 
                 name="modDescription" 
-                rows="4" 
+                rows=4
                 className="mt-1 p-2 block w-full border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300" 
                 required 
               />
