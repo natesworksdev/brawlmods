@@ -284,7 +284,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods Collection</h1>
         <p className="text-center text-muted-foreground mb-8">
@@ -302,7 +302,7 @@ export default function Home() {
               className="pl-10"
             />
           </div>
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center mb-4">
             {allTags.map(tag => (
               <Badge
                 key={tag}
@@ -317,9 +317,9 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMods.map((mod, index) => (
-            <Card key={index} className="flex flex-col">
+            <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
-                <CardTitle>{mod.name}</CardTitle>
+                <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {mod.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary">
@@ -339,16 +339,16 @@ export default function Home() {
                   <SelectContent>
                     {mod.versions.map((version, vIndex) => (
                       <SelectItem key={vIndex} value={version.version}>
-                        {version.version}
+                        Version {version.version}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
                 <div className="flex gap-2 w-full">
-                  <Button variant="outline" asChild className="flex-1">
+                  <Button variant="default" asChild className="flex-1">
                     <Link href={mod.versions[mod.versions.length - 1].mirrorLink}>
                       <DownloadIcon className="mr-2 h-4 w-4" />
-                      Mirror
+                      Download
                     </Link>
                   </Button>
                   {mod.versions[mod.versions.length - 1].secondaryMirror && (
@@ -371,17 +371,11 @@ export default function Home() {
             This content is not affiliated nor endorsed by Supercell, use at your own risk
           </p>
           <nav className="flex gap-6">
-            <Link href="#" className="text-sm hover:underline underline-offset-4">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-sm hover:underline underline-offset-4">
-              Privacy Policy
-            </Link>
             <Link href="mailto:contact@natesworks.com" className="text-sm hover:underline underline-offset-4 flex items-center">
               <MailIcon className="mr-2 h-4 w-4" />
               Contact
             </Link>
-            <Link href="#" className="text-sm hover:underline underline-offset-4 flex items-center">
+            <Link href="https://discord.com/users/1272251195133526046" className="text-sm hover:underline underline-offset-4 flex items-center">
               <MessageCircleIcon className="mr-2 h-4 w-4" />
               Discord
             </Link>
