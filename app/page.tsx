@@ -271,7 +271,7 @@ const mods: Mod[] = [
   },
   {
     name: "Crasher's Brawl",
-    description: "Offline version of V29 with new skins and... interesting brawler names.",
+    description: "Brawl Stars V29 with 11 brand new brawlers!",
     tags: ["Offline"],
     versions: [
       {
