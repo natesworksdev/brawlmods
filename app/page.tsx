@@ -147,7 +147,7 @@ const mods: Mod[] = [
     tags: ["Offline"],
     versions: [
       {
-        version: "1.0",
+        version: "V15",
         mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX"
       }
     ]
