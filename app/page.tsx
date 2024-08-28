@@ -31,7 +31,7 @@ const mods: Mod[] = [
       {
         version: "V56 for Android",
         downloadLink: "https://dnull.xyz/latest_bs",
-        altDownload: "https://drive.google.com/file/d/11866WS3Q1HzVcNfD3dJYSS4yRlXJ6wEO/view?usp=sharing"
+        altDownload: "https://drive.google.com/uc?export=download&id=11866WS3Q1HzVcNfD3dJYSS4yRlXJ6wEO"
       },
       {
         version: "V56 for iOS",
@@ -47,18 +47,25 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V43",
-        downloadLink: "https://files.magic-servers.xyz/mb.apk"
+        downloadLink: "https://files.magic-servers.xyz/mb.apk",
+        altDownload: "https://drive.google.com/uc?export=download&id=1Ze3Nt3fU212WbCk8M7n9XKwDm910WVTg"
       }
     ]
   },
   {
     name: "Retro Brawl",
     description: "Retro Brawl is the old version of Brawl Stars (2018). Online battles, 21 characters and star powers for them, clans, etc. are available on the server. Feel better times, from the old menu to the atmosphere!",
-    tags: ["Private server"],
+    tags: ["Private server", "Supports iOS"],
     versions: [
       {
-        version: "V12",
-        downloadLink: "https://files.magic-servers.xyz/retrobrawl.apk"
+        version: "V12 for Android",
+        downloadLink: "https://files.magic-servers.xyz/retrobrawl.apk",
+        altDownload: "https://drive.google.com/uc?export=download&id=1cTyA1pg-5UxAcdN4-WEPIiStSQM5Ogsx"
+      },
+      {
+        version: "V12 for iOS",
+        downloadLink: "https://files.magic-servers.xyz/retrobrawl.ipa",
+        altDownload: "https://drive.google.com/uc?export=download&id=1FYAubtY9OSQJXDNYxfyh5i9MFeQo0gBz"
       }
     ]
   },
@@ -91,7 +98,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V57",
-        downloadLink: "https://drive.google.com/file/d/1eQUsIbt2alGLtzxmy0Zh48QpRNz9qjZe/view?usp=sharing",
+        downloadLink: "https://drive.google.com/uc?export=download&id=1eQUsIbt2alGLtzxmy0Zh48QpRNz9qjZe",
         altDownload: "https://www.mediafire.com/file/dtev6981ol4j7du/Brawl_Stars57.325NoJb.ipa/file"
       }
     ]
