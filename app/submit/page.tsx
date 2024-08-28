@@ -3,7 +3,7 @@
 import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 
-export default function GoogleFormPage() {
+export default function ModSubmissionForm() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -12,18 +12,51 @@ export default function GoogleFormPage() {
           Submit a mod to be published on our website.
         </p>
         <div className="max-w-4xl mx-auto">
-          
-          <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfm_ck5gkRyiXl9labtuM7l1c1U7wUExrzelMa4PWXOVI8RPg/viewform?embedded=true" 
-            width="100%"
-            height="750"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            className="rounded-lg shadow-md"
+          <form 
+            action="https://formsubmit.co/submit@natesworks.com" 
+            method="POST" 
+            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
           >
-            Loading…
-          </iframe>
+            <div className="mb-4">
+              <label htmlFor="modName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Mod Name:</label>
+              <input 
+                type="text" 
+                id="modName" 
+                name="modName" 
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300" 
+                required 
+              />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="modLink" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Mod Download or Telegram Link:</label>
+              <input 
+                type="url" 
+                id="modLink" 
+                name="modLink" 
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300" 
+                required 
+              />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="modDescription" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Short Mod Description:</label>
+              <textarea 
+                id="modDescription" 
+                name="modDescription" 
+                rows="4" 
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300" 
+                required 
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
+            >
+              Submit Mod
+            </button>
+          </form>
         </div>
       </main>
       <footer className="w-full py-6 bg-muted mt-8">
