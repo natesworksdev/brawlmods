@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Brawl Stars Mods Collection',
+  title: 'Brawl Stars Mods',
   description: 'Explore and download mods for Brawl Stars',
 }
 
