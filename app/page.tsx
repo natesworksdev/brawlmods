@@ -267,6 +267,7 @@ const mods: Mod[] = [
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [selectedVersion, setSelectedVersion] = useState<{ [key: string]: string }>({})
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>()
@@ -320,53 +321,61 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredMods.map((mod, index) => (
-            <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {mod.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{mod.description}</p>
-              </CardContent>
-              <CardFooter className="flex flex-col items-center mt-auto">
-                <Select defaultValue={mod.versions[mod.versions.length - 1].version}>
-                  <SelectTrigger className="w-full mb-2">
-                    <SelectValue placeholder="Select version" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {mod.versions.map((version, vIndex) => (
-                      <SelectItem key={vIndex} value={version.version}>
-                        {version.version}
-                      </SelectItem>
+          {filteredMods.map((mod, index) => {
+            const selectedModVersion = selectedVersion[mod.name] || mod.versions[0].version;
+            const currentVersion = mod.versions.find(v => v.version === selectedModVersion);
+            
+            return (
+              <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {mod.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary">
+                        {tag}
+                      </Badge>
                     ))}
-                  </SelectContent>
-                </Select>
-                <div className="flex gap-2 w-full">
-                  <Button variant="default" asChild className="flex-1">
-                    <Link href={mod.versions[mod.versions.length - 1].mirrorLink}>
-                      <DownloadIcon className="mr-2 h-4 w-4" />
-                      Download
-                    </Link>
-                  </Button>
-                  {mod.versions[mod.versions.length - 1].secondaryMirror && (
-                    <Button variant="outline" asChild className="flex-1">
-                      <Link href={mod.versions[mod.versions.length - 1].secondaryMirror!}>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">{mod.description}</p>
+                </CardContent>
+                <CardFooter className="flex flex-col items-center mt-auto">
+                  <Select 
+                    value={selectedModVersion}
+                    onValueChange={(version) => setSelectedVersion(prev => ({ ...prev, [mod.name]: version }))}
+                  >
+                    <SelectTrigger className="w-full mb-2">
+                      <SelectValue placeholder="Select version" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {mod.versions.map((version, vIndex) => (
+                        <SelectItem key={vIndex} value={version.version}>
+                          {version.version}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <div className="flex gap-2 w-full">
+                    <Button variant="default" asChild className="flex-1">
+                      <Link href={currentVersion?.mirrorLink || "#"} passHref>
                         <DownloadIcon className="mr-2 h-4 w-4" />
-                        Mirror 2
+                        Download
                       </Link>
                     </Button>
-                  )}
-                </div>
-              </CardFooter>
-            </Card>
-          ))}
+                    {currentVersion?.secondaryMirror && (
+                      <Button variant="outline" asChild className="flex-1">
+                        <Link href={currentVersion.secondaryMirror} passHref>
+                          <DownloadIcon className="mr-2 h-4 w-4" />
+                          Mirror 2
+                        </Link>
+                      </Button>
+                    )}
+                  </div>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </main>
       <footer className="w-full py-6 bg-muted mt-8">
