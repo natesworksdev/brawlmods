@@ -90,7 +90,17 @@ const mods: Mod[] = [
       }
     ]
   },
-
+  {
+    name: "Brawl Stars",
+    description: "Unmodified official game. Must be installed using SAI (Split Apk Installer)!",
+    tags: ["Official server"],
+    versions: [
+      {
+        version: "V57",
+        mirrorLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing"
+      }
+    ]
+  },
   {
     name: "Surge Offline",
     description: "An offline version of brawl stars! Allows you to open boxes to unlock brawlers, gain trophies and play any mode. It also adds new skins and 3rd star powers for some brawlers",
