@@ -136,11 +136,18 @@ const mods = [
     tags: ["Offline"]
   },
   {
-    name: "GioBrawl",
-    description: "Brawl Stars V29 private server.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1m0uJLjT1uyLGZECvXvuwyeG6XevgXRVq",
+    name: "Rowsor Brawl",
+    description: "Brawl Stars V28 private server.",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ",
     torrentLink:"torrents",
     tags: ["Private server"]
+  },
+  {
+    name: "GioBrawl",
+    description: "Offline version of V29 with new skins and... interesting brawler names.",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO",
+    torrentLink:"torrents",
+    tags: ["Offline"]
   }
 
 ]
