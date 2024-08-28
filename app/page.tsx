@@ -135,14 +135,36 @@ const mods = [
 ]
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const filteredMods = mods.filter(mod =>
+    mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    mod.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    mod.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  )
+
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods Collection</h1>
         <p className="text-center text-muted-foreground mb-8">
-        Check out these Brawl Stars mods, which include private servers with new star powers, skins, and brawlers. There are also modded versions of the official game that let you see enemy ammo, switch servers, and access other new features!        </p>
+          Explore our curated collection of Brawl Stars mods to enhance your gaming experience. 
+          Download and install these mods to unlock new features, skins, and gameplay mechanics!
+        </p>
+        <div className="max-w-md mx-auto mb-8">
+          <div className="relative">
+            <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+            <Input
+              type="text"
+              placeholder="Search mods..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mods.map((mod, index) => (
+          {filteredMods.map((mod, index) => (
             <Card key={index} className="flex flex-col">
               <CardHeader>
                 <CardTitle>{mod.name}</CardTitle>
@@ -157,21 +179,13 @@ export default function Home() {
               <CardContent className="flex-grow">
                 <p className="text-muted-foreground">{mod.description}</p>
               </CardContent>
-              <CardFooter className="flex justify-between mt-auto">
+              <CardFooter className="flex justify-center mt-auto">
                 <Button variant="outline" asChild>
                   <Link href={mod.mirrorLink}>
                     <DownloadIcon className="mr-2 h-4 w-4" />
-                    Mirror
+                    Download
                   </Link>
                 </Button>
-{/*
-                <Button variant="outline" asChild>
-                  <Link href={mod.torrentLink}>
-                    <MagnetIcon className="mr-2 h-4 w-4" />
-                    Torrent
-                  </Link>
-                </Button>
-*/}
               </CardFooter>
             </Card>
           ))}
