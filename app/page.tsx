@@ -34,7 +34,8 @@ const mods: Mod[] = [
       },
       {
         version: "Latest iOS",
-        mirrorLink: "https://dnull.xyz/latest_bs_i"
+        mirrorLink: "https://dnull.xyz/latest_bs_i",
+        secondaryMirror: "https://drive.google.com/uc?export=download&id=1qDaEwLtDQLpsIRh8ejg7F5_ysMyfPTA9"
       }
     ]
   },
