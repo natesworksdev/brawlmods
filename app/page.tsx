@@ -268,7 +268,19 @@ const mods: Mod[] = [
         downloadLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
       }
     ]
-  }
+  },
+  {
+    name: "Crasher's Brawl",
+    description: "Offline version of V29 with new skins and... interesting brawler names.",
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "0.5 (BS V29)",
+        downloadLink: "https://drive.google.com/uc?export=download&id=1sMNJzJG61x1swTpiYJfISix-fFwx20uP",
+        altDownload: "https://www.mediafire.com/file/ry7k1x0eckdgcr1/Crasher's+Brawl_v0.5.apk/file"
+      }
+    ]
+}
 ];
 
 
