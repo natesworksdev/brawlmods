@@ -2,6 +2,7 @@
 
 import { MailIcon, MessageCircleIcon } from "lucide-react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button" // Import Button from your UI library
 
 export default function ModSubmissionForm() {
   return (
@@ -50,12 +51,16 @@ export default function ModSubmissionForm() {
               />
             </div>
 
-            <button 
-              type="submit" 
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
-            >
-              Submit Mod
-            </button>
+            <div className="flex gap-2 w-full">
+              <Button variant="default" asChild className="flex-1">
+                <button 
+                  type="submit" 
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Submit Mod
+                </button>
+              </Button>
+            </div>
           </form>
         </div>
       </main>
@@ -78,4 +83,4 @@ export default function ModSubmissionForm() {
       </footer>
     </div>
   )
-}
+              }
