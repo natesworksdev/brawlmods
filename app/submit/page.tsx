@@ -18,11 +18,11 @@ export default function GoogleFormPage() {
             <CardContent>
               <iframe 
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfm_ck5gkRyiXl9labtuM7l1c1U7wUExrzelMa4PWXOVI8RPg/viewform?embedded=true" 
-                width="100%" 
-                height="750" 
-                frameBorder="0" 
-                marginHeight="0" 
-                marginWidth="0"
+                width="100%"
+                height="750"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
                 className="rounded-lg shadow-md"
               >
                 Loading…
