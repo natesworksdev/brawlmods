@@ -29,7 +29,7 @@ const mods: Mod[] = [
     tags: ["Private server", "Supports iOS"],
     versions: [
       {
-        version: "Latest",
+        version: "Latest Android",
         mirrorLink: "https://dnull.xyz/latest_bs"
       },
       {
