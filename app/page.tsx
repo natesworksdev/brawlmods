@@ -49,91 +49,98 @@ const mods = [
     description: "An offline version of brawl stars! Allows you to open boxes to unlock brawlers, gain trophies and play any mode. It also adds new skins and 3rd star powers for some brawlers",
     mirrorLink: "https://example.com/mirror/hyper-speed-mod",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "BSL v53 Client",
     description: "Selfhost your own private server.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "BSL v53 Server",
     description: "Brawl stars V53 server made from scratch!",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "BSL v55 Client",
     description: "Selfhost your own V55 private server.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "BSL v55 Server",
     description: "Brawl stars V55 server made from scratch!",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "BSDS v41 Client",
     description: "Selfhost your own V41 private server.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "BSDS v41 Server",
     description: "Brawl stars V41 server made from scratch!",
     mirrorLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk",
     torrentLink:"torrents",
-    tags: ["Private server", "Selfhosted", "Offline"]
+    tags: ["Selfhosted"]
   },
   {
     name: "Infinity Reverse Brawl",
     description: "All characters unlocked and third star powers added for some brawlers and new skins.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "Buster's Brawl",
     description: "All brawlers unlocked and maxed out. Attempts to recreate brawlers from newer versions of the game.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "TomatoBrawlOG",
     description: "Adds 4 new brawlers - Melee bot, mouse bot, ranged bot and boss bot! Based on Beta Brawl (V11).",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "Mechaoffline",
     description: "An offline version of V19.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "Multi Brawl",
     description: "A modified version of V47 that replaces ALL the brawlers will new ones.",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
   },
   {
     name: "Brawl Mod Beta",
     description: "Offline version of V11",
     mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO",
     torrentLink:"torrents",
-    tags: ["Private server", "Offline"]
+    tags: ["Offline"]
+  },
+  {
+    name: "GioBrawl",
+    description: "Brawl Stars V29 private server.",
+    mirrorLink: "https://drive.google.com/uc?export=download&id=1m0uJLjT1uyLGZECvXvuwyeG6XevgXRVq",
+    torrentLink:"torrents",
+    tags: ["Private server"]
   }
 
 ]
