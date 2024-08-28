@@ -13,7 +13,7 @@ export default function ModSubmissionForm() {
         </p>
         <div className="max-w-4xl mx-auto">
           <form 
-            action="https://formsubmit.co/submit@natesworks.com" 
+            action="https://formsubmit.co/6650b3d735e3c9c77c9734ce9168ea10" 
             method="POST" 
             className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
           >
@@ -44,7 +44,7 @@ export default function ModSubmissionForm() {
               <textarea 
                 id="modDescription" 
                 name="modDescription" 
-                rows={4}
+                rows={4} 
                 className="mt-1 p-2 block w-full border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300" 
                 required 
               />
