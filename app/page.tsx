@@ -288,8 +288,7 @@ export default function Home() {
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods Collection</h1>
         <p className="text-center text-muted-foreground mb-8">
-          Explore our curated collection of Brawl Stars mods to enhance your gaming experience. 
-          Download and install these mods to unlock new features, skins, and gameplay mechanics!
+        Check out these Brawl Stars mods, which include private servers with new star powers, skins, and brawlers. There are also modded versions of the official game that let you see enemy ammo, switch servers, and access other new features!
         </p>
         <div className="max-w-4xl mx-auto mb-8">
           <div className="relative mb-4">
