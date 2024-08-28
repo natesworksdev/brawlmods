@@ -30,7 +30,8 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V56 for Android",
-        downloadLink: "https://dnull.xyz/latest_bs"
+        downloadLink: "https://dnull.xyz/latest_bs",
+        altDownload: "https://drive.google.com/file/d/11866WS3Q1HzVcNfD3dJYSS4yRlXJ6wEO/view?usp=sharing"
       },
       {
         version: "V56 for iOS",
