@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
+import { DownloadIcon, MailIcon, MessageCircleIcon, SearchIcon } from "lucide-react"
 import Link from "next/link"
 
 const mods = [
@@ -140,23 +140,37 @@ const mods = [
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
 
-  const filteredMods = mods.filter(mod =>
-    mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    mod.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    mod.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-  )
+  const allTags = useMemo(() => {
+    const tagSet = new Set<string>()
+    mods.forEach(mod => mod.tags.forEach(tag => tagSet.add(tag)))
+    return Array.from(tagSet)
+  }, [])
+
+  const filteredMods = useMemo(() => {
+    return mods.filter(mod =>
+      (mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       mod.description.toLowerCase().includes(searchTerm.toLowerCase())) &&
+      (selectedTags.length === 0 || selectedTags.every(tag => mod.tags.includes(tag)))
+    )
+  }, [searchTerm, selectedTags])
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags(prev =>
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    )
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods Collection</h1>
         <p className="text-center text-muted-foreground mb-8">
-          Explore our curated collection of Brawl Stars mods to enhance your gaming experience. 
-          Download and install these mods to unlock new features, skins, and gameplay mechanics!
+          Check out these Brawl Stars mods, which include private servers with new star powers, skins, and brawlers. There are also modded versions of the official game that let you see enemy ammo, switch servers, and access other new features!
         </p>
-        <div className="max-w-md mx-auto mb-8">
-          <div className="relative">
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="relative mb-4">
             <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
             <Input
               type="text"
@@ -165,6 +179,18 @@ export default function Home() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10"
             />
+          </div>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {allTags.map(tag => (
+              <Badge
+                key={tag}
+                variant={selectedTags.includes(tag) ? "default" : "outline"}
+                className="cursor-pointer"
+                onClick={() => toggleTag(tag)}
+              >
+                {tag}
+              </Badge>
+            ))}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -198,7 +224,7 @@ export default function Home() {
       <footer className="w-full py-6 bg-muted mt-8">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-          This content is not affiliated nor endorsed by Supercell, use at your own risk
+            &copy; {new Date().getFullYear()} Brawl Stars Mods. All rights reserved.
           </p>
           <nav className="flex gap-6">
             <Link href="#" className="text-sm hover:underline underline-offset-4">
