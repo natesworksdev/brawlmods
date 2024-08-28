@@ -26,11 +26,15 @@ const mods: Mod[] = [
   {
     name: "Nulls Brawl",
     description: "Null's Brawl is a Brawl Stars private server with unlimited gems, gold and boxes. Play with friends on any brawler you want.",
-    tags: ["Private server"],
+    tags: ["Private server", "Supports iOS"],
     versions: [
       {
         version: "Latest",
         mirrorLink: "https://dnull.xyz/latest_bs"
+      },
+      {
+        version: "Latest iOS",
+        mirrorLink: "https://dnull.xyz/latest_bs_i"
       }
     ]
   },
@@ -81,7 +85,7 @@ const mods: Mod[] = [
   {
     name: "Supercell Jailbreak",
     description: "Official ipas, but without the annoying crash of the jailbreak detection.",
-    tags: ["Official server", "iOS"],
+    tags: ["Official server", "Supports iOS"],
     versions: [
       {
         version: "V57",
