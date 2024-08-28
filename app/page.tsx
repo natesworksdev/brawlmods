@@ -11,8 +11,8 @@ import Link from "next/link"
 
 interface ModVersion {
   version: string;
-  mirrorLink: string;
-  secondaryMirror?: string;
+  downloadLink: string;
+  altDownload?: string;
 }
 
 interface Mod {
@@ -30,12 +30,12 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V56 for Android",
-        mirrorLink: "https://dnull.xyz/latest_bs"
+        downloadLink: "https://dnull.xyz/latest_bs"
       },
       {
         version: "V56 for iOS",
-        mirrorLink: "https://dnull.xyz/latest_bs_i",
-        secondaryMirror: "https://drive.google.com/uc?export=download&id=1qDaEwLtDQLpsIRh8ejg7F5_ysMyfPTA9"
+        downloadLink: "https://dnull.xyz/latest_bs_i",
+        altDownload: "https://drive.google.com/uc?export=download&id=1qDaEwLtDQLpsIRh8ejg7F5_ysMyfPTA9"
       }
     ]
   },
@@ -46,7 +46,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V43",
-        mirrorLink: "https://files.magic-servers.xyz/mb.apk"
+        downloadLink: "https://files.magic-servers.xyz/mb.apk"
       }
     ]
   },
@@ -57,7 +57,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V12",
-        mirrorLink: "https://files.magic-servers.xyz/retrobrawl.apk"
+        downloadLink: "https://files.magic-servers.xyz/retrobrawl.apk"
       }
     ]
   },
@@ -68,7 +68,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V56",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
+        downloadLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
       }
     ]
   },
@@ -79,7 +79,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V56",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1IStoE_bUPRq1rkZ9OWE0SF_-oXWYu_8y"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1IStoE_bUPRq1rkZ9OWE0SF_-oXWYu_8y"
       }
     ]
   },
@@ -90,8 +90,8 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V57",
-        mirrorLink: "https://drive.google.com/file/d/1eQUsIbt2alGLtzxmy0Zh48QpRNz9qjZe/view?usp=sharing",
-        secondaryMirror: "https://www.mediafire.com/file/dtev6981ol4j7du/Brawl_Stars57.325NoJb.ipa/file"
+        downloadLink: "https://drive.google.com/file/d/1eQUsIbt2alGLtzxmy0Zh48QpRNz9qjZe/view?usp=sharing",
+        altDownload: "https://www.mediafire.com/file/dtev6981ol4j7du/Brawl_Stars57.325NoJb.ipa/file"
       }
     ]
   },
@@ -102,7 +102,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V57",
-        mirrorLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing"
+        downloadLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing"
       }
     ]
   },
@@ -113,7 +113,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V28",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1fxULYszSieEy3JkTW10E-ArK5LEmMBEK"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1fxULYszSieEy3JkTW10E-ArK5LEmMBEK"
       }
     ]
   },
@@ -124,13 +124,13 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V53",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK",
-        secondaryMirror: "https://www.mediafire.com/file/n7gptweb86ncf5a/com.bsl.v53-rev1.apk/file"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK",
+        altDownload: "https://www.mediafire.com/file/n7gptweb86ncf5a/com.bsl.v53-rev1.apk/file"
       },
       {
         version: "V55",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_",
-        secondaryMirror: "https://www.mediafire.com/file/v7zgn71r0gw1nqi/com.bsl.v55.apk/file"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_",
+        altDownload: "https://www.mediafire.com/file/v7zgn71r0gw1nqi/com.bsl.v55.apk/file"
       }
     ]
   },
@@ -141,13 +141,13 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V53",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO",
-        secondaryMirror: "https://github.com/LkPrtctrd/BSL-V53/archive/refs/heads/master.zip"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO",
+        altDownload: "https://github.com/LkPrtctrd/BSL-V53/archive/refs/heads/master.zip"
       },
       {
         version: "V55",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5",
-        secondaryMirror: "https://github.com/LkPrtctrd/BSL-V55/archive/refs/heads/master.zip"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5",
+        altDownload: "https://github.com/LkPrtctrd/BSL-V55/archive/refs/heads/master.zip"
       }
     ]
   },
@@ -158,7 +158,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V41",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8"
       }
     ]
   },
@@ -169,7 +169,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V41",
-        mirrorLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk"
+        downloadLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk"
       }
     ]
   },
@@ -180,7 +180,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V15",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX"
       }
     ]
   },
@@ -191,7 +191,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V12",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs"
       }
     ]
   },
@@ -202,7 +202,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V11",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04"
       }
     ]
   },
@@ -213,7 +213,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V19",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E"
       }
     ]
   },
@@ -224,7 +224,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V47",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1"
       }
     ]
   },
@@ -235,7 +235,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V11",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
       }
     ]
   },
@@ -246,7 +246,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V28",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
       }
     ]
   },
@@ -257,7 +257,7 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V29",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
+        downloadLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
       }
     ]
   }
@@ -358,16 +358,16 @@ export default function Home() {
                   </Select>
                   <div className="flex gap-2 w-full">
                     <Button variant="default" asChild className="flex-1">
-                      <Link href={currentVersion?.mirrorLink || "#"} passHref>
+                      <Link href={currentVersion?.downloadLink || "#"} passHref>
                         <DownloadIcon className="mr-2 h-4 w-4" />
                         Download
                       </Link>
                     </Button>
-                    {currentVersion?.secondaryMirror && (
+                    {currentVersion?.altDownload && (
                       <Button variant="outline" asChild className="flex-1">
-                        <Link href={currentVersion.secondaryMirror} passHref>
+                        <Link href={currentVersion.altDownload} passHref>
                           <DownloadIcon className="mr-2 h-4 w-4" />
-                          Mirror 2
+                          Alternative Download
                         </Link>
                       </Button>
                     )}
