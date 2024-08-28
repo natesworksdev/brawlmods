@@ -29,11 +29,11 @@ const mods: Mod[] = [
     tags: ["Private server", "Supports iOS"],
     versions: [
       {
-        version: "Latest Android",
+        version: "V56 for Android",
         mirrorLink: "https://dnull.xyz/latest_bs"
       },
       {
-        version: "Latest iOS",
+        version: "V56 for iOS",
         mirrorLink: "https://dnull.xyz/latest_bs_i",
         secondaryMirror: "https://drive.google.com/uc?export=download&id=1qDaEwLtDQLpsIRh8ejg7F5_ysMyfPTA9"
       }
@@ -45,7 +45,7 @@ const mods: Mod[] = [
     tags: ["Private server"],
     versions: [
       {
-        version: "Latest",
+        version: "V43",
         mirrorLink: "https://files.magic-servers.xyz/mb.apk"
       }
     ]
@@ -56,7 +56,7 @@ const mods: Mod[] = [
     tags: ["Private server"],
     versions: [
       {
-        version: "Latest",
+        version: "V12",
         mirrorLink: "https://files.magic-servers.xyz/retrobrawl.apk"
       }
     ]
