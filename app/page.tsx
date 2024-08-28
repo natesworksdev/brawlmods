@@ -312,7 +312,7 @@ export default function Home() {
                   <SelectContent>
                     {mod.versions.map((version, vIndex) => (
                       <SelectItem key={vIndex} value={version.version}>
-                        Version {version.version}
+                        {version.version}
                       </SelectItem>
                     ))}
                   </SelectContent>
