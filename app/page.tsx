@@ -96,26 +96,30 @@ const mods: Mod[] = [
     versions: [
       {
         version: "V53",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK"
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK",
+        secondaryMirror: "https://www.mediafire.com/file/n7gptweb86ncf5a/com.bsl.v53-rev1.apk/file"
       },
       {
         version: "V55",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_"
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_",
+        secondaryMirror: "https://www.mediafire.com/file/v7zgn71r0gw1nqi/com.bsl.v55.apk/file"
       }
     ]
   },
   {
     name: "BSL Server",
-    description: "Brawl stars V53 server made from scratch!",
+    description: "Brawl stars server made from scratch!",
     tags: ["Selfhosted"],
     versions: [
       {
         version: "V53",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO"
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO",
+        secondaryMirror: "https://github.com/LkPrtctrd/BSL-V53/archive/refs/heads/master.zip"
       },
       {
         version: "V55",
-        mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5"
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5",
+        secondaryMirror: "https://github.com/LkPrtctrd/BSL-V55/archive/refs/heads/master.zip"
       }
     ]
   },
