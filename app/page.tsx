@@ -5,151 +5,232 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { DownloadIcon, MailIcon, MessageCircleIcon, SearchIcon } from "lucide-react"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 
-const mods = [
+interface ModVersion {
+  version: string;
+  mirrorLink: string;
+  secondaryMirror?: string;
+}
+
+interface Mod {
+  name: string;
+  description: string;
+  tags: string[];
+  versions: ModVersion[];
+}
+
+const mods: Mod[] = [
   {
     name: "Nulls Brawl",
     description: "Null's Brawl is a Brawl Stars private server with unlimited gems, gold and boxes. Play with friends on any brawler you want.",
-    mirrorLink: "https://dnull.xyz/latest_bs",
-    torrentLink:"torrents",
-    tags: ["Private server"]
+    tags: ["Private server"],
+    versions: [
+      {
+        version: "Latest",
+        mirrorLink: "https://dnull.xyz/latest_bs"
+      }
+    ]
   },
   {
     name: "Magic Brawl",
     description: "Magic Brawl is the rebirth of Brawl Stars and its best times! All content is available on the server: online battles, all the characters and everything. By downloading this server, you can get great pleasure from the updates, because we update the server every month!",
-    mirrorLink: "https://files.magic-servers.xyz/mb.apk",
-    torrentLink:"torrents",
-    tags: ["Private server"]
+    tags: ["Private server"],
+    versions: [
+      {
+        version: "Latest",
+        mirrorLink: "https://files.magic-servers.xyz/mb.apk"
+      }
+    ]
   },
   {
     name: "Retro Brawl",
     description: "Retro Brawl is the old version of Brawl Stars (2018). Online battles, 21 characters and star powers for them, clans, etc. are available on the server. Feel better times, from the old menu to the atmosphere!",
-    mirrorLink: "https://files.magic-servers.xyz/retrobrawl.apk",
-    torrentLink:"torrents",
-    tags: ["Private server"]
+    tags: ["Private server"],
+    versions: [
+      {
+        version: "Latest",
+        mirrorLink: "https://files.magic-servers.xyz/retrobrawl.apk"
+      }
+    ]
   },
   {
     name: "BSD Brawl",
     description: "Allows changing server region, viewing enemies ammo and more!",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib",
-    torrentLink:"torrents",
-    tags: ["Official server"]
+    tags: ["Official server"],
+    versions: [
+      {
+        version: "V56",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
+      }
+    ]
   },
   {
     name: "Gene Brawl",
     description: "Adds a debug menu allowing you to visually unlock all brawlers and more!",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1IStoE_bUPRq1rkZ9OWE0SF_-oXWYu_8y",
-    torrentLink:"torrents",
-    tags: ["Official server"]
+    tags: ["Official server"],
+    versions: [
+      {
+        version: "V56",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1IStoE_bUPRq1rkZ9OWE0SF_-oXWYu_8y"
+      }
+    ]
   },
   {
     name: "Surge Offline",
     description: "An offline version of brawl stars! Allows you to open boxes to unlock brawlers, gain trophies and play any mode. It also adds new skins and 3rd star powers for some brawlers",
-    mirrorLink: "https://example.com/mirror/hyper-speed-mod",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V28",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1fxULYszSieEy3JkTW10E-ArK5LEmMBEK"
+      }
+    ]
   },
   {
-    name: "BSL v53 Client",
-    description: "Selfhost your own private server.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
+    name: "BSL Client",
+    description: "Play on your selfhosted server.",
+    tags: ["Selfhosted"],
+    versions: [
+      {
+        version: "V53",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK"
+      },
+     {
+        version: "V55",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_"
+      }
+    ]
   },
   {
-    name: "BSL v53 Server",
+    name: "BSL Server",
     description: "Brawl stars V53 server made from scratch!",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
+    tags: ["Selfhosted"],
+    versions: [
+      {
+        version: "V53",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO"
+      },
+     {
+        version: "V55",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5"
+      }
+    ]
+  }
+    ]
   },
   {
-    name: "BSL v55 Client",
-    description: "Selfhost your own V55 private server.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
-  },
-  {
-    name: "BSL v55 Server",
-    description: "Brawl stars V55 server made from scratch!",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
-  },
-  {
-    name: "BSDS v41 Client",
+    name: "BSDS Client",
     description: "Selfhost your own V41 private server.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
+    tags: ["Selfhosted"],
+    versions: [
+      {
+        version: "V41",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1zUZw9Sq0Z2uRIDKi35cKmRIqqoA6S8Z8"
+      }
+    ]
   },
   {
-    name: "BSDS v41 Server",
+    name: "BSDS Server",
     description: "Brawl stars V41 server made from scratch!",
-    mirrorLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk",
-    torrentLink:"torrents",
-    tags: ["Selfhosted"]
+    tags: ["Selfhosted"],
+    versions: [
+      {
+        version: "V41",
+        mirrorLink: "https://drive.google.com/file/d/15bD-aZFFVfGmJ1zpOd3O61IrJ-I_pCmY/view?usp=drivesdk"
+      }
+    ]
   },
   {
     name: "Infinity Reverse Brawl",
     description: "All characters unlocked and third star powers added for some brawlers and new skins.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "1.0",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1dP-EnCmu-yAGSCb27bcTRRXisxFjJxXX"
+      }
+    ]
   },
   {
     name: "Buster's Brawl",
     description: "All brawlers unlocked and maxed out. Attempts to recreate brawlers from newer versions of the game.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V12",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1UWmaBt635O0TaS6H4oNB-wnVFefBimAs"
+      }
+    ]
   },
   {
     name: "TomatoBrawlOG",
-    description: "Adds 4 new brawlers - Melee bot, mouse bot, ranged bot and boss bot! Based on Beta Brawl (V11).",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    description: "Adds 4 new brawlers - Melee bot, mouse bot, ranged bot and boss bot! Based on Beta Brawl.",
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V11",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1as-qDZ7pcCJryay58eE67DvvP3sWGP04"
+      }
+    ]
   },
   {
     name: "Mechaoffline",
     description: "An offline version of V19.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V19",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1Ilz1Ob71x9EOi7k9Yub8NqllNQ5_6P0E"
+      }
+    ]
   },
   {
     name: "Multi Brawl",
     description: "A modified version of V47 that replaces ALL the brawlers will new ones.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V47",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1"
+      }
+    ]
   },
   {
     name: "Brawl Mod Beta",
     description: "Offline version of V11",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V11",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
+      }
+    ]
   },
   {
     name: "Rowsor Brawl",
     description: "Brawl Stars V28 private server.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ",
-    torrentLink:"torrents",
-    tags: ["Private server"]
+    tags: ["Private server"],
+    versions: [
+      {
+        version: "V28",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
+      }
+    ]
   },
   {
     name: "GioBrawl",
     description: "Offline version of V29 with new skins and... interesting brawler names.",
-    mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO",
-    torrentLink:"torrents",
-    tags: ["Offline"]
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V29",
+        mirrorLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
+      }
+    ]
   }
-
 ]
 
 export default function Home() {
@@ -181,7 +262,8 @@ export default function Home() {
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods Collection</h1>
         <p className="text-center text-muted-foreground mb-8">
-          Check out these Brawl Stars mods, which include private servers with new star powers, skins, and brawlers. There are also modded versions of the official game that let you see enemy ammo, switch servers, and access other new features!
+          Explore our curated collection of Brawl Stars mods to enhance your gaming experience. 
+          Download and install these mods to unlock new features, skins, and gameplay mechanics!
         </p>
         <div className="max-w-4xl mx-auto mb-8">
           <div className="relative mb-4">
@@ -223,13 +305,35 @@ export default function Home() {
               <CardContent className="flex-grow">
                 <p className="text-muted-foreground">{mod.description}</p>
               </CardContent>
-              <CardFooter className="flex justify-center mt-auto">
-                <Button variant="outline" asChild>
-                  <Link href={mod.mirrorLink}>
-                    <DownloadIcon className="mr-2 h-4 w-4" />
-                    Download
-                  </Link>
-                </Button>
+              <CardFooter className="flex flex-col items-center mt-auto">
+                <Select defaultValue={mod.versions[mod.versions.length - 1].version}>
+                  <SelectTrigger className="w-full mb-2">
+                    <SelectValue placeholder="Select version" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {mod.versions.map((version, vIndex) => (
+                      <SelectItem key={vIndex} value={version.version}>
+                        Version {version.version}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <div className="flex gap-2 w-full">
+                  <Button variant="outline" asChild className="flex-1">
+                    <Link href={mod.versions[mod.versions.length - 1].mirrorLink}>
+                      <DownloadIcon className="mr-2 h-4 w-4" />
+                      Download
+                    </Link>
+                  </Button>
+                  {mod.versions[mod.versions.length - 1].secondaryMirror && (
+                    <Button variant="outline" asChild className="flex-1">
+                      <Link href={mod.versions[mod.versions.length - 1].secondaryMirror!}>
+                        <DownloadIcon className="mr-2 h-4 w-4" />
+                        Mirror 2
+                      </Link>
+                    </Button>
+                  )}
+                </div>
               </CardFooter>
             </Card>
           ))}
