@@ -98,7 +98,7 @@ const mods: Mod[] = [
         version: "V53",
         mirrorLink: "https://drive.google.com/uc?export=download&id=1wE1V2cN1msRYbTSKT3tZfVv9r-TqyPAK"
       },
-     {
+      {
         version: "V55",
         mirrorLink: "https://drive.google.com/uc?export=download&id=1jtEw9lOfs1YEBh9JipP7nR0h1JY6XAM_"
       }
@@ -113,12 +113,10 @@ const mods: Mod[] = [
         version: "V53",
         mirrorLink: "https://drive.google.com/uc?export=download&id=1Uwjb8nJgT73KFns71R2-4YLnyCyWD8iO"
       },
-     {
+      {
         version: "V55",
         mirrorLink: "https://drive.google.com/uc?export=download&id=1KGPzvCRW_Hdq6JP9KzqDa6WsM1bk0ig5"
       }
-    ]
-  }
     ]
   },
   {
@@ -231,7 +229,8 @@ const mods: Mod[] = [
       }
     ]
   }
-]
+];
+
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
