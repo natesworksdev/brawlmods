@@ -79,6 +79,19 @@ const mods: Mod[] = [
     ]
   },
   {
+    name: "Supercell Jailbreak",
+    description: "Official ipas, but without the annoying crash of the jailbreak detection.",
+    tags: ["Official server", "iOS"],
+    versions: [
+      {
+        version: "V57",
+        mirrorLink: "https://drive.google.com/file/d/1eQUsIbt2alGLtzxmy0Zh48QpRNz9qjZe/view?usp=sharing",
+        secondaryMirror: "https://www.mediafire.com/file/dtev6981ol4j7du/Brawl_Stars57.325NoJb.ipa/file"
+      }
+    ]
+  },
+
+  {
     name: "Surge Offline",
     description: "An offline version of brawl stars! Allows you to open boxes to unlock brawlers, gain trophies and play any mode. It also adds new skins and 3rd star powers for some brawlers",
     tags: ["Offline"],
@@ -325,7 +338,7 @@ export default function Home() {
                   <Button variant="outline" asChild className="flex-1">
                     <Link href={mod.versions[mod.versions.length - 1].mirrorLink}>
                       <DownloadIcon className="mr-2 h-4 w-4" />
-                      Download
+                      Mirror
                     </Link>
                   </Button>
                   {mod.versions[mod.versions.length - 1].secondaryMirror && (
