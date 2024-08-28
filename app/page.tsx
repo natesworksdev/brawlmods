@@ -341,7 +341,7 @@ export default function Home() {
       <footer className="w-full py-6 bg-muted mt-8">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-            &copy; {new Date().getFullYear()} Brawl Stars Mods. All rights reserved.
+            This content is not affiliated nor endorsed by Supercell, use at your own risk
           </p>
           <nav className="flex gap-6">
             <Link href="#" className="text-sm hover:underline underline-offset-4">
