@@ -118,7 +118,7 @@ export const mods: Mod[] = [
     },
     {
         name: "BSL",
-        description: "Brawl stars server made from scratch!",
+        description: "BSDS ripoff ported to new versions and without battles working.",
         tags: ["Selfhosted"],
         versions: [
             {
@@ -145,7 +145,7 @@ export const mods: Mod[] = [
     },
     {
         name: "BSDS Client",
-        description: "Selfhost your own private server.",
+        description: "Selfhost your own private server with working battles.",
         tags: ["Selfhosted"],
         versions: [
             {
