@@ -341,4 +341,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "Nais Brawl",
+        description: "Replaces all brawlers with new ones!",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V17",
+                downloadLink: "https://www.mediafire.com/file/2w2en451dm7haj5/Nais+Brawl+v17.apk/file",
+            }
+        ]
+    },
 ];
