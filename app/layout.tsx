@@ -46,11 +46,13 @@ export default function RootLayout({
                 </nav>
               </SheetContent>
             </Sheet>
+            {/*
             <div className="flex flex-1 items-center justify-end space-x-2">
               <Button variant="ghost" size="sm" className="text-foreground/60 hover:text-foreground/80">
                 Sign In
               </Button>
             </div>
+            */}
           </div>
         </header>
 
