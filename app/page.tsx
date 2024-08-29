@@ -8,39 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { DownloadIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
-
-interface ModVersion {
-  version: string;
-  downloadLink: string;
-  altDownload?: string;
-}
-
-interface Mod {
-  name: string;
-  description: string;
-  tags: string[];
-  versions: ModVersion[];
-}
-
-const mods: Mod[] = [
-  {
-    name: "Super Mod",
-    description: "Enhances gameplay with new features and skins.",
-    tags: ["Gameplay", "Skins"],
-    versions: [
-      { version: "1.0", downloadLink: "#" },
-      { version: "2.0", downloadLink: "#", altDownload: "#" }
-    ]
-  },
-  {
-    name: "Private Server Mod",
-    description: "Play on a private server with custom rules.",
-    tags: ["Server", "Custom Rules"],
-    versions: [
-      { version: "1.5", downloadLink: "#" }
-    ]
-  }
-];
+import { mods } from './mods';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
