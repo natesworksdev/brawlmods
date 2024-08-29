@@ -296,4 +296,16 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "Cool Brawl",
+        description: "Adds mod menu, new skins, a new brawler and more.",
+        tags: ["Utilities"],
+        versions: [
+            {
+                version: "V29",
+                downloadLink: "https://drive.google.com/uc?export=download&id=1HFbzPGFMn92GPdENLKG_lfy6yXOU3ME-",
+                altDownload: "https://www.mediafire.com/file/whywimld9t3dnqf/Cool+Brawl_v1.0.1.apk/file"
+            }
+        ]
+    }
 ];
