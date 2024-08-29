@@ -299,7 +299,7 @@ export const mods: Mod[] = [
     {
         name: "Cool Brawl",
         description: "Adds mod menu, new skins, a new brawler and more.",
-        tags: ["Utilities"],
+        tags: ["Offline"],
         versions: [
             {
                 version: "V29",
