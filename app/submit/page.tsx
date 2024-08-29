@@ -64,23 +64,6 @@ export default function ModSubmissionForm() {
           </form>
         </div>
       </main>
-      <footer className="w-full py-6 bg-muted mt-8">
-        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-            This content is not affiliated nor endorsed by Supercell, use at your own risk
-          </p>
-          <nav className="flex gap-6">
-            <Link href="mailto:contact@natesworks.com" className="text-sm hover:underline underline-offset-4 flex items-center">
-              <MailIcon className="mr-2 h-4 w-4" />
-              Contact
-            </Link>
-            <Link href="https://discord.com/users/1272251195133526046" className="text-sm hover:underline underline-offset-4 flex items-center">
-              <MessageCircleIcon className="mr-2 h-4 w-4" />
-              Discord
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
               }

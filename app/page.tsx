@@ -6,7 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { DownloadIcon, MailIcon, MessageCircleIcon, Search as SearchIcon } from "lucide-react"
+import { DownloadIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 
 interface ModVersion {
@@ -22,7 +22,7 @@ interface Mod {
   versions: ModVersion[];
 }
 
-const mods: Mod[] = [
+ const mods: Mod[] = [
   {
     name: "Nulls Brawl",
     description: "Null's Brawl is a Brawl Stars private server with unlimited gems, gold and boxes. Play with friends on any brawler you want.",
@@ -283,7 +283,6 @@ const mods: Mod[] = [
 }
 ];
 
-
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
@@ -310,111 +309,92 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods</h1>
-        <p className="text-center text-muted-foreground mb-8">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods</h1>
+      <p className="text-center text-muted-foreground mb-8">
         Check out these Brawl Stars mods, which include private servers with new star powers, skins, and brawlers. There are also modded versions of the official game that let you see enemy ammo, switch servers, and access other new features!
-        </p>
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="relative mb-4">
-            <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="Search mods..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
-            />
-          </div>
-          <div className="flex flex-wrap gap-2 justify-center mb-4">
-            {allTags.map(tag => (
-              <Badge
-                key={tag}
-                variant={selectedTags.includes(tag) ? "default" : "outline"}
-                className="cursor-pointer"
-                onClick={() => toggleTag(tag)}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
+      </p>
+      <div className="max-w-4xl mx-auto mb-8">
+        <div className="relative mb-4">
+          <SearchIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder="Search mods..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-10"
+          />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredMods.map((mod, index) => {
-            const selectedModVersion = selectedVersion[mod.name] || mod.versions[0].version;
-            const currentVersion = mod.versions.find(v => v.version === selectedModVersion);
-            
-            return (
-              <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {mod.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary">
-                        {tag}
-                      </Badge>
+        <div className="flex flex-wrap gap-2 justify-center mb-4">
+          {allTags.map(tag => (
+            <Badge
+              key={tag}
+              variant={selectedTags.includes(tag) ? "default" : "outline"}
+              className="cursor-pointer"
+              onClick={() => toggleTag(tag)}
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredMods.map((mod, index) => {
+          const selectedModVersion = selectedVersion[mod.name] || mod.versions[0].version;
+          const currentVersion = mod.versions.find(v => v.version === selectedModVersion);
+          
+          return (
+            <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {mod.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-muted-foreground">{mod.description}</p>
+              </CardContent>
+              <CardFooter className="flex flex-col items-center mt-auto">
+                <Select 
+                  value={selectedModVersion}
+                  onValueChange={(version) => setSelectedVersion(prev => ({ ...prev, [mod.name]: version }))}
+                >
+                  <SelectTrigger className="w-full mb-2">
+                    <SelectValue placeholder="Select version" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {mod.versions.map((version, vIndex) => (
+                      <SelectItem key={vIndex} value={version.version}>
+                        {version.version}
+                      </SelectItem>
                     ))}
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{mod.description}</p>
-                </CardContent>
-                <CardFooter className="flex flex-col items-center mt-auto">
-                  <Select 
-                    value={selectedModVersion}
-                    onValueChange={(version) => setSelectedVersion(prev => ({ ...prev, [mod.name]: version }))}
-                  >
-                    <SelectTrigger className="w-full mb-2">
-                      <SelectValue placeholder="Select version" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {mod.versions.map((version, vIndex) => (
-                        <SelectItem key={vIndex} value={version.version}>
-                          {version.version}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <div className="flex gap-2 w-full">
-                    <Button variant="default" asChild className="flex-1">
-                      <Link href={currentVersion?.downloadLink || "#"} passHref>
+                  </SelectContent>
+                </Select>
+                <div className="flex gap-2 w-full">
+                  <Button variant="default" asChild className="flex-1">
+                    <Link href={currentVersion?.downloadLink || "#"}>
+                      <DownloadIcon className="mr-2 h-4 w-4" />
+                      Download
+                    </Link>
+                  </Button>
+                  {currentVersion?.altDownload && (
+                    <Button variant="outline" asChild className="flex-1">
+                      <Link href={currentVersion.altDownload}>
                         <DownloadIcon className="mr-2 h-4 w-4" />
-                        Download
+                        Alt Download
                       </Link>
                     </Button>
-                    {currentVersion?.altDownload && (
-                      <Button variant="outline" asChild className="flex-1">
-                        <Link href={currentVersion.altDownload} passHref>
-                          <DownloadIcon className="mr-2 h-4 w-4" />
-                          Alt Download
-                        </Link>
-                      </Button>
-                    )}
-                  </div>
-                </CardFooter>
-              </Card>
-            );
-          })}
-        </div>
-      </main>
-      <footer className="w-full py-6 bg-muted mt-8">
-        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-            This content is not affiliated nor endorsed by Supercell, use at your own risk
-          </p>
-          <nav className="flex gap-6">
-            <Link href="mailto:contact@natesworks.com" className="text-sm hover:underline underline-offset-4 flex items-center">
-              <MailIcon className="mr-2 h-4 w-4" />
-              Contact
-            </Link>
-            <Link href="https://discord.com/users/1272251195133526046" className="text-sm hover:underline underline-offset-4 flex items-center">
-              <MessageCircleIcon className="mr-2 h-4 w-4" />
-              Discord
-            </Link>
-          </nav>
-        </div>
-      </footer>
+                  )}
+                </div>
+              </CardFooter>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   )
 }
