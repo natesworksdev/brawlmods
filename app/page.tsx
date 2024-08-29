@@ -37,11 +37,6 @@ export default function Home() {
   }
 
   return (
-    <>
-      <Head>
-        <title>Brawl Stars Mods</title>
-        <meta name="description" content="Explore and download mods for Brawl Stars" />
-      </Head>
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods</h1>
       <p className="text-center text-muted-foreground mb-8">
@@ -129,6 +124,5 @@ export default function Home() {
         })}
       </div>
     </div>
-    </>
   )
 }
