@@ -352,4 +352,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "Boomerang Brawl",
+        description: "All brawlers attacks return like Carls.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V46",
+                downloadLink: "https://www.mediafire.com/file/ex3yb4x3tmffd3i/boomerang+brawl_signed_clone.apk/file",
+            }
+        ]
+    },
 ];
