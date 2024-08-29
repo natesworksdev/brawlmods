@@ -330,4 +330,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "GTX Brawl",
+        description: "Adds skins from Chinese Brawl Stars, adds new skins, maps and modifiers.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V29",
+                downloadLink: "https://www.mediafire.com/file/pxeeiqcq60260n1/GTXBRAWL_Axusterra.apk/file",
+            }
+        ]
+    },
 ];
