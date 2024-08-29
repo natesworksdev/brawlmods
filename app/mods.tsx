@@ -307,5 +307,16 @@ export const mods: Mod[] = [
                 altDownload: "https://www.mediafire.com/file/whywimld9t3dnqf/Cool+Brawl_v1.0.1.apk/file"
             }
         ]
-    }
+    },
+    {
+        name: "True V53 Offline",
+        description: "Brawl Stars V53 Offline. Doesn't work on Android 14 and Brawl Ball and Showdown don't work.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V53",
+                downloadLink: "https://drive.google.com/uc?export=download&id=13fvm0sBnV4KFICeBB8EnxlAgPn4vbO1J",
+            }
+        ]
+    },
 ];
