@@ -319,4 +319,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "Darryl Stars",
+        description: "Adds 30 new brawlers.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V9 (BS V29)",
+                downloadLink: "https://www.mediafire.com/file/toku4rrnefxbr8c/Darryl_Stars_V9.apk/file",
+            }
+        ]
+    },
 ];
