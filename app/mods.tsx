@@ -281,4 +281,19 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "X-coder",
+        description: "A tool for decoding (sc to png) and encoding (png to sc) sc files used in Supercell games.",
+        tags: ["Utilities"],
+        versions: [
+            {
+                version: "V2.2 for Android",
+                downloadLink: "https://github.com/lilmuff2/X-coder/releases/download/v2.2/X-coder.apk",
+            },
+            {
+                version: "V2.2 for Windows",
+                downloadLink: "https://github.com/lilmuff2/X-coder/releases/download/v2.2/X-coder_setup.exe",
+            }
+        ]
+    },
 ];
