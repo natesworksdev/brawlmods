@@ -291,7 +291,8 @@ interface Mod {
         downloadLink: "https://drive.google.com/uc?export=download&id=1_90LQFje1W8qDryqBkwxD4GHWuiOBpLC",
         altDownload: "https://www.mediafire.com/file/abe65bxfc6wtcxh/Dimensional_Brawl_V4.apk/file"
       }
-    ]
+    }
+  ]
 ];
 
 export default function Home() {
