@@ -2,7 +2,11 @@
 
 import { MailIcon, MessageCircleIcon } from "lucide-react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button" // Import Button from your UI library
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
 
 export default function ModSubmissionForm() {
   return (
@@ -12,58 +16,71 @@ export default function ModSubmissionForm() {
         <p className="text-center text-muted-foreground mb-8">
           Submit a mod to be published on our website.
         </p>
-        <div className="max-w-4xl mx-auto">
-          <form 
-            action="https://formsubmit.co/6650b3d735e3c9c77c9734ce9168ea10" 
-            method="POST" 
-            className="bg-white p-6 rounded-lg"
-          >
-            <div className="mb-4">
-              <label htmlFor="modName" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Mod Name:</label>
-              <input 
-                type="text" 
-                id="modName" 
-                name="modName" 
-                className="mt-1 p-2 block w-full rounded-md dark:text-gray-300" 
-                required 
-              />
-            </div>
+        <Card className="max-w-4xl mx-auto">
+          <CardHeader>
+            <CardTitle>Mod Submission Form</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form 
+              action="https://formsubmit.co/6650b3d735e3c9c77c9734ce9168ea10" 
+              method="POST" 
+              className="space-y-4"
+            >
+              <div className="space-y-2">
+                <Label htmlFor="modName">Mod Name</Label>
+                <Input 
+                  type="text" 
+                  id="modName" 
+                  name="modName" 
+                  required 
+                />
+              </div>
 
-            <div className="mb-4">
-              <label htmlFor="modLink" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Mod Download or Telegram Link:</label>
-              <input 
-                type="url" 
-                id="modLink" 
-                name="modLink" 
-                className="mt-1 p-2 block w-full border rounded-md dark:text-gray-300" 
-                required 
-              />
-            </div>
+              <div className="space-y-2">
+                <Label htmlFor="modLink">Mod Download or Telegram Link</Label>
+                <Input 
+                  type="url" 
+                  id="modLink" 
+                  name="modLink" 
+                  required 
+                />
+              </div>
 
-            <div className="mb-4">
-              <label htmlFor="modDescription" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Short Mod Description:</label>
-              <textarea 
-                id="modDescription" 
-                name="modDescription" 
-                rows={4} 
-                className="mt-1 p-2 block w-full border rounded-md dark:text-gray-300" 
-                required 
-              />
-            </div>
+              <div className="space-y-2">
+                <Label htmlFor="modDescription">Short Mod Description</Label>
+                <Textarea 
+                  id="modDescription" 
+                  name="modDescription" 
+                  rows={4} 
+                  required 
+                />
+              </div>
 
-            <div className="flex gap-2 w-full">
-              <Button variant="default" asChild className="flex-1">
-                <button 
-                  type="submit" 
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
-                >
-                  Submit Mod
-                </button>
+              <Button type="submit" className="w-full">
+                Submit Mod
               </Button>
-            </div>
-          </form>
-        </div>
+            </form>
+          </CardContent>
+        </Card>
       </main>
+
+      <footer className="w-full py-6 bg-background border-t">
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
+            This content is not affiliated with or endorsed by Supercell. Use at your own risk.
+          </p>
+          <nav className="flex gap-6">
+            <Link href="mailto:contact@natesworks.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center">
+              <MailIcon className="mr-2 h-4 w-4" />
+              Contact
+            </Link>
+            <Link href="https://discord.com/users/1272251195133526046" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center">
+              <MessageCircleIcon className="mr-2 h-4 w-4" />
+              Discord
+            </Link>
+          </nav>
+        </div>
+      </footer>
     </div>
   )
-              }
+}
