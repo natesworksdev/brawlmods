@@ -280,7 +280,18 @@ interface Mod {
         altDownload: "https://www.mediafire.com/file/ry7k1x0eckdgcr1/Crasher's+Brawl_v0.5.apk/file"
       }
     ]
-}
+},
+{
+    name: "Dimensional Brawl",
+    description: "Dimensional Brawl is a small mod made on v29 mainly about custom brawlers",
+    tags: ["Offline"],
+    versions: [
+      {
+        version: "V29",
+        downloadLink: "https://drive.google.com/uc?export=download&id=1_90LQFje1W8qDryqBkwxD4GHWuiOBpLC",
+        altDownload: "https://www.mediafire.com/file/abe65bxfc6wtcxh/Dimensional_Brawl_V4.apk/file"
+      }
+    ]
 ];
 
 export default function Home() {
