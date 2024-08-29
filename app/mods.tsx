@@ -363,4 +363,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "Aimbot Brawl",
+        description: "Enables aimbot.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V46",
+                downloadLink: "https://www.mediafire.com/file/7gskpz9kijgbpgy/aimbot+brawl.apk/file",
+            }
+        ]
+    },
 ];
