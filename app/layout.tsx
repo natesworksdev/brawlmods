@@ -26,10 +26,6 @@ export default function RootLayout({
           <div className="container flex h-14 items-center">
             <div className="mr-4 hidden md:flex">
               <Link href="/" className="mr-6 flex items-center space-x-2">
-                <Image src="/logo.png" alt="Logo" width={32} height={32} />
-                <span className="hidden font-bold sm:inline-block">
-                  Brawl Stars Mods
-                </span>
               </Link>
               <nav className="flex items-center space-x-6 text-sm font-medium">
                 <Link href="/">Home</Link>
@@ -48,8 +44,6 @@ export default function RootLayout({
               </SheetTrigger>
               <SheetContent side="left" className="pr-0">
                 <Link href="/" className="flex items-center space-x-2">
-                  <Image src="/logo.png" alt="Logo" width={32} height={32} />
-                  <span className="font-bold">Brawl Stars Mods</span>
                 </Link>
                 <nav className="mt-4 flex flex-col space-y-4">
                   <Link href="/" className="text-sm font-medium">
@@ -64,9 +58,6 @@ export default function RootLayout({
             <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
               <div className="w-full flex-1 md:w-auto md:flex-none">
                 <Link href="/" className="mr-6 flex items-center space-x-2 md:hidden">
-                  <Image src="/logo.png" alt="Logo" width={32} height={32} />
-                  <span className="font-bold inline-block">
-                    Brawl Stars Mods
                   </span>
                 </Link>
               </div>
