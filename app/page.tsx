@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { DownloadIcon, Search as SearchIcon } from "lucide-react"
 import Link from "next/link"
 import { mods } from './mods';
+import Head from 'next/head';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -36,6 +37,11 @@ export default function Home() {
   }
 
   return (
+    <>
+      <Head>
+        <title>Brawl Stars Mods</title>
+        <meta name="description" content="Explore and download mods for Brawl Stars" />
+      </Head>
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold text-center mb-4">Brawl Stars Mods</h1>
       <p className="text-center text-muted-foreground mb-8">
@@ -123,5 +129,6 @@ export default function Home() {
         })}
       </div>
     </div>
+    </>
   )
 }

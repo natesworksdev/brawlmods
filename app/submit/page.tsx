@@ -7,9 +7,15 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
+import Head from 'next/head';
 
 export default function ModSubmissionForm() {
   return (
+    <>
+      <Head>
+        <title>Brawl Stars Mods - Submit</title>
+        <meta name="description" content="Submit a mod to be published on our website." />
+      </Head>
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Submit mod</h1>
@@ -82,5 +88,6 @@ export default function ModSubmissionForm() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
