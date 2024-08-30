@@ -364,7 +364,18 @@ export const mods: Mod[] = [
         ]
     },
     {
-        name: "Aimbot Brawl",
+        name: "Mt Brawl",
+        description: "All brawlers are cursef.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "Finished",
+                downloadLink: "https://www.mediafire.com/file/x88p4q6g6an96pk/Mt+Brawl+finish.apk/file",
+            }
+        ]
+    },
+    {
+        name: "AimbMTot Brawl",
         description: "Enables aimbot.",
         tags: ["Offline"],
         versions: [
