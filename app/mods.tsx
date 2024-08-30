@@ -375,7 +375,7 @@ export const mods: Mod[] = [
         ]
     },
     {
-        name: "AimbMTot Brawl",
+        name: "Mt Brawl",
         description: "Enables aimbot.",
         tags: ["Offline"],
         versions: [
