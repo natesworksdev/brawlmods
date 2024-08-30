@@ -13,23 +13,27 @@ export default function ModInfo() {
     const searchParams = useSearchParams();
     const id = searchParams.get('id');
 
-    const mod = mods.find(mod => mod.id === id);
+    const [activeTab, setActiveTab] = useState('information');
 
-    if (!mod) {
-        return <div className="container mx-auto px-4 py-8">Mod not found for ID: {id}</div>;
-    }
+    const modInfo = useMemo(() => {
+        const mod = mods.find(mod => mod.id === id);
+        if (!mod) return null;
 
-    const hasScreenshots = mod.screenshots && mod.screenshots.length > 0;
-    const hasVersions = mod.versions && mod.versions.length > 0;
+        const hasScreenshots = mod.screenshots && mod.screenshots.length > 0;
+        const hasVersions = mod.versions && mod.versions.length > 0;
 
-    const tabs = useMemo(() => {
         const availableTabs = ['information'];
         if (hasScreenshots) availableTabs.push('screenshots');
         if (hasVersions) availableTabs.push('versions');
-        return availableTabs;
-    }, [hasScreenshots, hasVersions]);
 
-    const [activeTab, setActiveTab] = useState(tabs[0]);
+        return { mod, hasScreenshots, hasVersions, availableTabs };
+    }, [id]);
+
+    if (!modInfo) {
+        return <div className="container mx-auto px-4 py-8">Mod not found for ID: {id}</div>;
+    }
+
+    const { mod, hasScreenshots, hasVersions, availableTabs } = modInfo;
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -42,10 +46,10 @@ export default function ModInfo() {
             <p className="text-muted-foreground mb-8">{mod.shortDescription}</p>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <TabsList className={`grid w-full grid-cols-${tabs.length}`}>
-                    {tabs.includes('information') && <TabsTrigger value="information">Information</TabsTrigger>}
-                    {tabs.includes('screenshots') && <TabsTrigger value="screenshots">Screenshots</TabsTrigger>}
-                    {tabs.includes('versions') && <TabsTrigger value="versions">Versions</TabsTrigger>}
+                <TabsList className={`grid w-full grid-cols-${availableTabs.length}`}>
+                    {availableTabs.includes('information') && <TabsTrigger value="information">Information</TabsTrigger>}
+                    {availableTabs.includes('screenshots') && <TabsTrigger value="screenshots">Screenshots</TabsTrigger>}
+                    {availableTabs.includes('versions') && <TabsTrigger value="versions">Versions</TabsTrigger>}
                 </TabsList>
                 <TabsContent value="information">
                     <Card>
