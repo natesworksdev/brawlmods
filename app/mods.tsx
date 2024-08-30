@@ -385,4 +385,15 @@ export const mods: Mod[] = [
             }
         ]
     },
+    {
+        name: "TTB Stars",
+        description: "Adds more brawlers.",
+        tags: ["Offline"],
+        versions: [
+            {
+                version: "V15",
+                downloadLink: "https://www.mediafire.com/file/7gskpz9kijgbpgy/aimbot+brawl.apk/file",
+            }
+        ]
+    },
 ];
