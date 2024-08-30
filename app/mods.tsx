@@ -13,6 +13,7 @@ interface Mod {
     tags: string[];
     versions: ModVersion[];
     id: string;
+    screenshots?: string[];
 }
 
 export const mods: Mod[] = [
