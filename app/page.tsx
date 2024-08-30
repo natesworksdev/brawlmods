@@ -1,15 +1,14 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { DownloadIcon, Search as SearchIcon } from "lucide-react"
-import Link from "next/link"
-import { mods } from './mods';
-import Head from 'next/head';
+import { mods } from './mods'
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -68,58 +67,78 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredMods.map((mod, index) => {
-          const selectedModVersion = selectedVersion[mod.name] || mod.versions[0].version;
+          const selectedModVersion = selectedVersion[mod.id] || mod.versions[0].version;
           const currentVersion = mod.versions.find(v => v.version === selectedModVersion);
-
+          
           return (
-            <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">{mod.name}</CardTitle>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {mod.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{mod.shortDescription}</p>
-              </CardContent>
-              <CardFooter className="flex flex-col items-center mt-auto">
-                <Select
-                  value={selectedModVersion}
-                  onValueChange={(version) => setSelectedVersion(prev => ({ ...prev, [mod.name]: version }))}
-                >
-                  <SelectTrigger className="w-full mb-2">
-                    <SelectValue placeholder="Select version" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {mod.versions.map((version, vIndex) => (
-                      <SelectItem key={vIndex} value={version.version}>
-                        {version.version}
-                      </SelectItem>
+            <Link href={`/mods?id=${mod.id}`} key={index} className="group">
+              <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">{mod.name}</CardTitle>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {mod.tags.map((tag, tagIndex) => (
+                      <Badge key={tagIndex} variant="secondary">
+                        {tag}
+                      </Badge>
                     ))}
-                  </SelectContent>
-                </Select>
-                <div className="flex gap-2 w-full">
-                  <Button variant="default" asChild className="flex-1">
-                    <Link href={currentVersion?.downloadLink || "#"}>
-                      <DownloadIcon className="mr-2 h-4 w-4" />
-                      Download
-                    </Link>
-                  </Button>
-                  {currentVersion?.altDownload && (
-                    <Button variant="outline" asChild className="flex-1">
-                      <Link href={currentVersion.altDownload}>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">{mod.description}</p>
+                </CardContent>
+                <CardFooter className="flex flex-col items-center mt-auto">
+                  <Select 
+                    value={selectedModVersion}
+                    onValueChange={(version) => {
+                      setSelectedVersion(prev => ({ ...prev, [mod.id]: version }))
+                    }}
+                  >
+                    <SelectTrigger className="w-full mb-2">
+                      <SelectValue placeholder="Select version" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {mod.versions.map((version, vIndex) => (
+                        <SelectItem key={vIndex} value={version.version}>
+                          {version.version}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <div className="flex gap-2 w-full">
+                    <Button 
+                      variant="default" 
+                      asChild 
+                      className="flex-1"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.open(currentVersion?.downloadLink, '_blank')
+                      }}
+                    >
+                      <span>
                         <DownloadIcon className="mr-2 h-4 w-4" />
-                        Alt Download
-                      </Link>
+                        Download
+                      </span>
                     </Button>
-                  )}
-                </div>
-              </CardFooter>
-            </Card>
+                    {currentVersion?.altDownload && (
+                      <Button 
+                        variant="outline" 
+                        asChild 
+                        className="flex-1"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          window.open(currentVersion.altDownload, '_blank')
+                        }}
+                      >
+                        <span>
+                          <DownloadIcon className="mr-2 h-4 w-4" />
+                          Alt Download
+                        </span>
+                      </Button>
+                    )}
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
           );
         })}
       </div>
