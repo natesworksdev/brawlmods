@@ -241,7 +241,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         versions: [
             {
                 version: "V47",
-                downloadLink: "https://drive.google.com/uc?export=download&id=1LGlIygczbCzEhx-M6JCP6BCtE_Oq8h_1"
+                downloadLink: "https://multibrawl.com/download"
             }
         ]
     },
