@@ -11,6 +11,7 @@ interface Mod {
     description: string;
     tags: string[];
     versions: ModVersion[];
+    id: string;
 }
 
 export const mods: Mod[] = [
@@ -18,6 +19,7 @@ export const mods: Mod[] = [
         name: "Nulls Brawl",
         description: "Null's Brawl is a Brawl Stars private server with unlimited gems, gold and boxes. Play with friends on any brawler you want.",
         tags: ["Private server", "Supports iOS"],
+        id: "nulls",
         versions: [
             {
                 version: "V56 for Android",
@@ -35,6 +37,7 @@ export const mods: Mod[] = [
         name: "Magic Brawl",
         description: "Magic Brawl is the rebirth of Brawl Stars and its best times! All content is available on the server: online battles, all the characters and everything. By downloading this server, you can get great pleasure from the updates, because we update the server every month!",
         tags: ["Private server"],
+        id: "magic",
         versions: [
             {
                 version: "V43",
@@ -47,6 +50,7 @@ export const mods: Mod[] = [
         name: "Retro Brawl",
         description: "Retro Brawl is the old version of Brawl Stars (2018). Online battles, 21 characters and star powers for them, clans, etc. are available on the server. Feel better times, from the old menu to the atmosphere!",
         tags: ["Private server", "Supports iOS"],
+        id: "retro",
         versions: [
             {
                 version: "V12 for Android",
@@ -64,6 +68,7 @@ export const mods: Mod[] = [
         name: "BSD Brawl",
         description: "Allows changing server region, viewing enemies ammo and more!",
         tags: ["Official server"],
+        id: "bsd",
         versions: [
             {
                 version: "V56",
@@ -75,6 +80,7 @@ export const mods: Mod[] = [
         name: "Gene Brawl",
         description: "Adds a debug menu allowing you to visually unlock all brawlers and more!",
         tags: ["Official server"],
+        id: "gene",
         versions: [
             {
                 version: "V56",
@@ -86,6 +92,7 @@ export const mods: Mod[] = [
         name: "Supercell Jailbreak",
         description: "Official ipas, but without the annoying crash of the jailbreak detection.",
         tags: ["Official server", "Supports iOS"],
+        id: "jailbreak",
         versions: [
             {
                 version: "V57",
@@ -98,6 +105,7 @@ export const mods: Mod[] = [
         name: "Brawl Stars",
         description: "Unmodified official game. Must be installed using SAI (Split Apk Installer)!",
         tags: ["Official server"],
+        id: "bs",
         versions: [
             {
                 version: "V57",
@@ -109,6 +117,7 @@ export const mods: Mod[] = [
         name: "Surge Offline",
         description: "An offline version of brawl stars! Allows you to open boxes to unlock brawlers, gain trophies and play any mode. It also adds new skins and 3rd star powers for some brawlers",
         tags: ["Offline"],
+        id: "sb",
         versions: [
             {
                 version: "V28",
@@ -120,6 +129,7 @@ export const mods: Mod[] = [
         name: "BSL",
         description: "BSDS ripoff ported to new versions and without battles working.",
         tags: ["Selfhosted"],
+        id: "bslsucks",
         versions: [
             {
                 version: "V53 Server",
@@ -147,6 +157,7 @@ export const mods: Mod[] = [
         name: "BSDS Client",
         description: "Selfhost your own private server with working battles.",
         tags: ["Selfhosted"],
+        id: "bsds",
         versions: [
             {
                 version: "V41 Server",
@@ -162,6 +173,7 @@ export const mods: Mod[] = [
         name: "Infinity Reverse Brawl",
         description: "All characters unlocked and third star powers added for some brawlers and new skins.",
         tags: ["Offline"],
+        id: "infinity-reverse",
         versions: [
             {
                 version: "V15",
@@ -173,6 +185,7 @@ export const mods: Mod[] = [
         name: "Buster's Brawl",
         description: "All brawlers unlocked and maxed out. Attempts to recreate brawlers from newer versions of the game.",
         tags: ["Offline"],
+        id: "buster",
         versions: [
             {
                 version: "V12",
@@ -184,6 +197,7 @@ export const mods: Mod[] = [
         name: "TomatoBrawlOG",
         description: "Adds 4 new brawlers - Melee bot, mouse bot, ranged bot and boss bot! Based on Beta Brawl.",
         tags: ["Offline"],
+        id: "tomato",
         versions: [
             {
                 version: "V11",
@@ -195,6 +209,7 @@ export const mods: Mod[] = [
         name: "Mechaoffline",
         description: "An offline version of V19.",
         tags: ["Offline"],
+        id: "mechaoffline",
         versions: [
             {
                 version: "V19",
@@ -206,6 +221,7 @@ export const mods: Mod[] = [
         name: "Multi Brawl",
         description: "A modified version of V47 that replaces ALL the brawlers will new ones.",
         tags: ["Offline"],
+        id: "multi",
         versions: [
             {
                 version: "V47",
@@ -217,6 +233,7 @@ export const mods: Mod[] = [
         name: "Brawl Mod Beta",
         description: "Offline version of V11",
         tags: ["Offline"],
+        id: "beta-offline",
         versions: [
             {
                 version: "V11",
@@ -228,6 +245,7 @@ export const mods: Mod[] = [
         name: "Rowsor Brawl",
         description: "Brawl Stars V28 private server.",
         tags: ["Private server"],
+        id: "rowsor",
         versions: [
             {
                 version: "V28",
@@ -239,6 +257,7 @@ export const mods: Mod[] = [
         name: "GioBrawl",
         description: "Offline version of V29 with new skins and... interesting brawler names.",
         tags: ["Offline"],
+        id: "gio",
         versions: [
             {
                 version: "V29",
@@ -250,6 +269,7 @@ export const mods: Mod[] = [
         name: "Crasher's Brawl",
         description: "Brawl Stars V29 with 11 brand new brawlers!",
         tags: ["Offline"],
+        id: "crasher",
         versions: [
             {
                 version: "0.5 (BS V29)",
@@ -262,6 +282,7 @@ export const mods: Mod[] = [
         name: "Dimensional Brawl",
         description: "Dimensional Brawl is a small mod made on v29 mainly about custom brawlers",
         tags: ["Offline"],
+        id: "dimensional",
         versions: [
             {
                 version: "V29",
@@ -274,6 +295,7 @@ export const mods: Mod[] = [
         name: "Mandy's Candy",
         description: "Ports many brawlers from newer versions of the game.",
         tags: ["Offline"],
+        id: "mandy",
         versions: [
             {
                 version: "Bizarre circus",
@@ -285,6 +307,7 @@ export const mods: Mod[] = [
         name: "X-coder",
         description: "A tool for decoding (sc to png) and encoding (png to sc) sc files used in Supercell games.",
         tags: ["Utilities"],
+        id: "x-coder",
         versions: [
             {
                 version: "V2.2 for Android",
@@ -300,6 +323,7 @@ export const mods: Mod[] = [
         name: "Cool Brawl",
         description: "Adds mod menu, new skins, a new brawler and more.",
         tags: ["Offline"],
+        id: "cool",
         versions: [
             {
                 version: "V29",
@@ -312,6 +336,7 @@ export const mods: Mod[] = [
         name: "True V53 Offline",
         description: "Brawl Stars V53 Offline. Doesn't work on Android 14 and Brawl Ball and Showdown don't work.",
         tags: ["Offline"],
+        id: "fuck-you-drive-this-isnt-malware",
         versions: [
             {
                 version: "V53",
@@ -323,6 +348,7 @@ export const mods: Mod[] = [
         name: "Darryl Stars",
         description: "Adds 30 new brawlers.",
         tags: ["Offline"],
+        id: "darryl",
         versions: [
             {
                 version: "V9 (BS V29)",
@@ -334,6 +360,7 @@ export const mods: Mod[] = [
         name: "GTX Brawl",
         description: "Adds skins from Chinese Brawl Stars, adds new skins, maps and modifiers.",
         tags: ["Offline"],
+        id: "gtx",
         versions: [
             {
                 version: "V29",
@@ -345,6 +372,7 @@ export const mods: Mod[] = [
         name: "Nais Brawl",
         description: "Replaces all brawlers with new ones!",
         tags: ["Offline"],
+        id: "nais",
         versions: [
             {
                 version: "V17",
@@ -356,6 +384,7 @@ export const mods: Mod[] = [
         name: "Boomerang Brawl",
         description: "All brawlers attacks return like Carls.",
         tags: ["Offline"],
+        id: "boomerang",
         versions: [
             {
                 version: "V46",
@@ -367,6 +396,7 @@ export const mods: Mod[] = [
         name: "Mt Brawl",
         description: "All brawlers are cursef.",
         tags: ["Offline"],
+        id: "mt",
         versions: [
             {
                 version: "Finished",
@@ -378,6 +408,7 @@ export const mods: Mod[] = [
         name: "Aimbot Brawl",
         description: "Enables aimbot.",
         tags: ["Offline"],
+        id: "aimbot",
         versions: [
             {
                 version: "V46",
@@ -389,6 +420,7 @@ export const mods: Mod[] = [
         name: "TTB Stars",
         description: "Adds more brawlers.",
         tags: ["Offline"],
+        id: "ttb",
         versions: [
             {
                 version: "V15",
