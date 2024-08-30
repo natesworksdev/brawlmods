@@ -19,7 +19,7 @@ export default function ModInfo() {
         const mod = mods.find(mod => mod.id === id);
         if (!mod) return null;
 
-        const hasScreenshots = mod.screenshots && mod.screenshots.length > 0;
+        const hasScreenshots = mod.screenshots !== undefined && mod.screenshots.length > 0;
         const hasVersions = mod.versions && mod.versions.length > 0;
 
         const availableTabs = ['information'];
@@ -47,9 +47,11 @@ export default function ModInfo() {
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className={`grid w-full grid-cols-${availableTabs.length}`}>
-                    {availableTabs.includes('information') && <TabsTrigger value="information">Information</TabsTrigger>}
-                    {availableTabs.includes('screenshots') && <TabsTrigger value="screenshots">Screenshots</TabsTrigger>}
-                    {availableTabs.includes('versions') && <TabsTrigger value="versions">Versions</TabsTrigger>}
+                    {availableTabs.map((tab) => (
+                        <TabsTrigger key={tab} value={tab}>
+                            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                        </TabsTrigger>
+                    ))}
                 </TabsList>
                 <TabsContent value="information">
                     <Card>
@@ -63,7 +65,7 @@ export default function ModInfo() {
                         <Card>
                             <CardContent className="pt-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {mod.screenshots.map((screenshot, index) => (
+                                    {mod.screenshots && mod.screenshots.map((screenshot, index) => (
                                         <div key={index} className="relative aspect-video">
                                             <Image 
                                                 src={screenshot} 
@@ -83,7 +85,7 @@ export default function ModInfo() {
                     <TabsContent value="versions">
                         <Card>
                             <CardContent className="pt-6">
-                                {mod.versions.map((version, index) => (
+                                {mod.versions && mod.versions.map((version, index) => (
                                     <div key={index} className="mb-6 last:mb-0">
                                         <h3 className="text-2xl font-semibold mb-2">Version {version.version}</h3>
                                         {version.changelog ? (
@@ -100,4 +102,4 @@ export default function ModInfo() {
             </Tabs>
         </div>
     );
-}
+                                                                            }
