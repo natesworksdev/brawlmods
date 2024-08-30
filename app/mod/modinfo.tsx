@@ -22,11 +22,9 @@ export default function ModInfo() {
         const mod = mods.find(mod => mod.id === id);
         if (!mod) return null;
 
-        const hasScreenshots = mod.screenshots !== undefined && mod.screenshots.length > 0;
         const hasVersions = mod.versions && mod.versions.length > 0;
 
         const availableTabs = ['information'];
-        if (hasScreenshots) availableTabs.push('screenshots');
         if (hasVersions) availableTabs.push('versions');
 
         return { mod, hasScreenshots, hasVersions, availableTabs };
@@ -36,7 +34,7 @@ export default function ModInfo() {
         return <div className="container mx-auto px-4 py-8">Mod not found for ID: {id}</div>;
     }
 
-    const { mod, hasScreenshots, hasVersions, availableTabs } = modInfo;
+    const { mod, hasVersions, availableTabs } = modInfo;
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -63,27 +61,6 @@ export default function ModInfo() {
                         </CardContent>
                     </Card>
                 </TabsContent>
-                {hasScreenshots && (
-                    <TabsContent value="screenshots">
-                        <Card>
-                            <CardContent className="pt-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {mod.screenshots && mod.screenshots.map((screenshot, index) => (
-                                        <div key={index} className="relative aspect-video">
-                                            <Image 
-                                                src={screenshot} 
-                                                alt={`Screenshot ${index + 1} of ${mod.name}`}
-                                                layout="fill"
-                                                objectFit="cover"
-                                                className="rounded-lg"
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </TabsContent>
-                )}
                 {hasVersions && (
                     <TabsContent value="versions">
                         <Card>
