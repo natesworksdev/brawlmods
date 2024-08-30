@@ -410,7 +410,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     },
     {
         name: "Mt Brawl",
-        shortDescription: "All brawlers are cursef.",
+        shortDescription: "All brawlers are cursed.",
         tags: ["Offline"],
         id: "mt",
         versions: [
