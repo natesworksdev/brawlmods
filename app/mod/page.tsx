@@ -4,7 +4,7 @@ import ModInfo from './modinfo';
 export default function ModPage() {
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <SearchBar />
+            <ModInfo />
         </Suspense>
     );
 }
