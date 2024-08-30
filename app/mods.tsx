@@ -4,6 +4,7 @@ interface ModVersion {
     version: string;
     downloadLink: string;
     altDownload?: string;
+    changelog?: string;
 }
 
 interface Mod {
