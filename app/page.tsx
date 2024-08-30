@@ -71,7 +71,7 @@ export default function Home() {
           const currentVersion = mod.versions.find(v => v.version === selectedModVersion);
           
           return (
-            <Link href={`/mods?id=${mod.id}`} key={index} className="group">
+            <Link href={`/mod?id=${mod.id}`} key={index} className="group">
               <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">{mod.name}</CardTitle>
@@ -84,7 +84,7 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{mod.description}</p>
+                  <p className="text-muted-foreground">{mod.shortDescription}</p>
                 </CardContent>
                 <CardFooter className="flex flex-col items-center mt-auto">
                   <Select 
