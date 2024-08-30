@@ -3,11 +3,14 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { mods } from '@/app/mods';
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import MarkdownRenderer from '@/components/ui/markdown';
+import { DownloadIcon } from 'lucide-react';
 
 export default function ModInfo() {
     const searchParams = useSearchParams();
@@ -46,9 +49,9 @@ export default function ModInfo() {
             <p className="text-muted-foreground mb-8">{mod.shortDescription}</p>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <TabsList className={`grid w-full grid-cols-${availableTabs.length}`}>
+                <TabsList className="flex mb-4">
                     {availableTabs.map((tab) => (
-                        <TabsTrigger key={tab} value={tab}>
+                        <TabsTrigger key={tab} value={tab} className="flex-1">
                             {tab.charAt(0).toUpperCase() + tab.slice(1)}
                         </TabsTrigger>
                     ))}
@@ -93,6 +96,22 @@ export default function ModInfo() {
                                         ) : (
                                             <p className="text-muted-foreground">No changelog available for this version.</p>
                                         )}
+                                        <div className="flex gap-2 mt-4">
+                                            <Button asChild>
+                                                <Link href={version.downloadLink}>
+                                                    <DownloadIcon className="mr-2 h-4 w-4" />
+                                                    Download
+                                                </Link>
+                                            </Button>
+                                            {version.altDownload && (
+                                                <Button variant="outline" asChild>
+                                                    <Link href={version.altDownload}>
+                                                        <DownloadIcon className="mr-2 h-4 w-4" />
+                                                        Alt Download
+                                                    </Link>
+                                                </Button>
+                                            )}
+                                        </div>
                                     </div>
                                 ))}
                             </CardContent>
@@ -102,4 +121,4 @@ export default function ModInfo() {
             </Tabs>
         </div>
     );
-                                                                            }
+}
