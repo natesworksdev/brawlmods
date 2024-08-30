@@ -53,11 +53,30 @@ export default function ModSubmissionForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="modDescription">Short Mod Description</Label>
+                <Label htmlFor="modDescription">Short Description</Label>
+                <Textarea 
+                  id="shortModDescription" 
+                  name="shortModDescription" 
+                  rows={2} 
+                  required 
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modDescription">Detailed Description</Label>
                 <Textarea 
                   id="modDescription" 
                   name="modDescription" 
-                  rows={4} 
+                  rows={6} 
+                  required 
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modDescription">Tags</Label>
+                <Textarea 
+                  id="tags" 
+                  name="tags" 
                   required 
                 />
               </div>
