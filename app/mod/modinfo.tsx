@@ -27,7 +27,7 @@ export default function ModInfo() {
         const availableTabs = ['information'];
         if (hasVersions) availableTabs.push('versions');
 
-        return { mod, hasScreenshots, hasVersions, availableTabs };
+        return { mod, hasVersions, availableTabs };
     }, [id]);
 
     if (!modInfo) {
