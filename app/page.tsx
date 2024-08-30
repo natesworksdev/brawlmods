@@ -25,7 +25,7 @@ export default function Home() {
   const filteredMods = useMemo(() => {
     return mods.filter(mod =>
       (mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        mod.description.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        mod.shortDescription.toLowerCase().includes(searchTerm.toLowerCase())) &&
       (selectedTags.length === 0 || selectedTags.every(tag => mod.tags.includes(tag)))
     )
   }, [searchTerm, selectedTags])
@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{mod.description}</p>
+                <p className="text-muted-foreground">{mod.shortDescription}</p>
               </CardContent>
               <CardFooter className="flex flex-col items-center mt-auto">
                 <Select

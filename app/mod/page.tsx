@@ -2,6 +2,8 @@
 
 import { useSearchParams } from 'next/navigation';
 import { mods } from '@/app/mods';
+import { Badge } from "@/components/ui/badge"
+import MarkdownRenderer from '@/components/ui/markdown';
 
 export default function SearchBar() {
     const searchParams = useSearchParams();
@@ -14,30 +16,21 @@ export default function SearchBar() {
     }
 
     return (
-        <div>
-            <h1>{mod.name}</h1>
-            <p>{mod.description}</p>
-            <h3>Tags:</h3>
-            <ul>
-                {mod.tags.map((tag, index) => (
-                    <li key={index}>{tag}</li>
-                ))}
-            </ul>
-            <h3>Versions:</h3>
-            <ul>
-                {mod.versions.map((version, index) => (
-                    <li key={index}>
-                        <strong>{version.version}</strong> - 
-                        <a href={version.downloadLink}>Download</a>
-                        {version.altDownload && (
-                            <>
-                                {' | '}
-                                <a href={version.altDownload}>Alternate Download</a>
-                            </>
-                        )}
-                    </li>
-                ))}
-            </ul>
+        <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-wrap gap-2 mb-4">
+            {mod.tags.map(tag => (
+                <Badge
+                key={tag}
+                variant="default"
+                >
+                {tag}
+                </Badge>
+            ))}
+            </div>
+            <h1 className="text-4xl font-bold mb-4">{mod.name}</h1>
+            <p className="text-muted-foreground mb-8">{mod.shortDescription}</p>
+
+            <MarkdownRenderer markdown={mod.description || mod.shortDescription} />
         </div>
     );
 }
