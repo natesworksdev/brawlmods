@@ -67,7 +67,7 @@ export default function ModInfo() {
                             <CardContent className="pt-6">
                                 {mod.versions && mod.versions.map((version, index) => (
                                     <div key={index} className="mb-6 last:mb-0">
-                                        <h3 className="text-2xl font-semibold mb-2">Version {version.version}</h3>
+                                        <h3 className="text-2xl font-semibold mb-2">{version.version}</h3>
                                         {version.changelog ? (
                                             <MarkdownRenderer markdown={version.changelog} />
                                         ) : (
