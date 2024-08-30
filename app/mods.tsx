@@ -170,7 +170,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         ]
     },
     {
-        name: "BSDS Client",
+        name: "BSDS",
         shortDescription: "Selfhost your own private server with working battles.",
         tags: ["Selfhosted"],
         id: "bsds",
