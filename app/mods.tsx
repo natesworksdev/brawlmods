@@ -432,4 +432,16 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
             }
         ]
     },
+    {
+        name: "GDX Brawl",
+        shortDescription: "Offline brawl stars.",
+        tags: ["Offline"],
+        id: "gdx",
+        versions: [
+            {
+                version: "V19",
+                downloadLink: "https://drive.google.com/uc?export=download&id=1EBlqGH_dnIlA5gZ-VeJIrhlpw5bDTHby",
+            }
+        ]
+    },
 ];
