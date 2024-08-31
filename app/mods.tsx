@@ -502,6 +502,15 @@ August 2024 - October 2024
         shortDescription: "A fully functional private server.",
         tags: ["Private server"],
         id: "hamster",
+        description: `
+what works?
+
+-Road of Glory
+-Club
+-Shop
+-Bot fights
+-Ratings
+ and much more`,
         versions: [
             {
                 version: "V28",
