@@ -288,12 +288,12 @@ August 2024 - October 2024
     },
     {
         name: "Multi Brawl",
-        shortDescription: "A modified version of V47 that replaces ALL the brawlers will new ones.",
+        shortDescription: "A modified version of V29 that replaces ALL the brawlers will new ones.",
         tags: ["Offline"],
         id: "multi",
         versions: [
             {
-                version: "V47",
+                version: "V47 (BS V29)",
                 downloadLink: "https://multibrawl.com/download"
             }
         ]
