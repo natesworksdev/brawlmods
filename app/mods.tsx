@@ -522,7 +522,7 @@ and much more!`,
         {
         name: "Pirate Offline",
         shortDescription: "A fully functional V24 offline mod.",
-        tags: ["Private server"],
+        tags: ["Offline"],
         id: "pirate",
         versions: [
             {
