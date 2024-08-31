@@ -122,10 +122,63 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         shortDescription: "Unmodified official game. Must be installed using SAI (Split Apk Installer)!",
         tags: ["Official server"],
         id: "bs",
+        description: `
+3v3 and Battle Royale
+
+Fast-paced 3v3 multiplayer and battle royale made for mobile! Play with friends or solo across a variety of game modes in under three minutes.
+
+Unlock and upgrade dozens of Brawlers with powerful Super abilities, Star Powers and Gadgets! Collect unique skins to stand out and show off. Battle in a variety of mysterious locations within the Brawliverse!
+
+BATTLE IN MULTIPLE GAME MODES
+- Gem Grab (3v3): Team up and out-strategize the opposing team. Collect and hold 10 gems to win, but get fragged and lose your gems.
+- Showdown (Solo/Duo): A battle royale style fight for survival. Collect power ups for your Brawler. Grab a friend or play solo - be the last Brawler standing in the rowdiest battle royale yet. Winner take all!
+- Brawl Ball (3v3): It's a whole new Brawl game! Show off your soccer/football skills and score two goals before the other team. There are no red cards here.
+- Bounty (3v3): Take out opponents to earn stars, but don’t let them pick you off. The squad with the most stars wins the match!
+- Heist (3v3): Protect your team’s safe and try to crack open your opponents’. Navigate the map to sneak, blast and blow your way clear to the enemies treasure.
+- Special Events: Limited time special PvE and PvP game modes.
+- Championship Challenge: Join Brawl Stars' esports scene with in-game qualifiers!
+
+UNLOCK AND UPGRADE BRAWLERS
+Collect and upgrade a variety of Brawlers with powerful Super abilities, Star Powers and Gadgets! Level them up and collect unique skins.
+
+BRAWL PASS
+Complete quests, open Brawl Boxes, earn Gems, pins and an exclusive Brawl Pass skin! Fresh content every season.
+
+BECOME THE STAR PLAYER
+Climb the local and regional leaderboards to prove you’re the greatest Brawler of them all!
+
+CONSTANTLY EVOLVING
+Look out for new Brawlers, skins, maps, special events and games modes in the future.
+
+PLEASE NOTE! Brawl Stars is free to download and play, however, some game items can also be purchased for real money. If you don't want to use this feature, please disable in-app purchases in your device's settings. Also, under our Terms of Service and Privacy Policy, you must be at least 9 years of age to play or download Brawl Stars.
+
+Features:
+- Team up for real-time 3v3 battles against players from across the world
+- A fast-paced multiplayer battle royale mode made for mobile
+- Unlock and collect new, powerful Brawlers - each with a signature attack and Super ability
+- New events and game modes daily
+- Battle solo or with friends
+- Climb to the top of the leaderboards in global and local rankings 
+- Join or start your own Club with fellow players to share tips and battle together
+- Customize Brawlers with unlockable skins
+- Player-designed maps offer challenging new terrain to master
+
+From the makers of Clash of Clans, Clash Royale and Boom Beach!`,
         versions: [
             {
                 version: "V57",
-                downloadLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing"
+                downloadLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing",
+                changelog: `
+## UPDATE 57: SPONGEBOB AND MORE!
+August 2024 - October 2024
+
+∙ New Event: SPONGEBOB Event
+∙ New Brawlers: Moe (Mythic) and Kenji (Legendary)
+∙ Hypercharges: Poco, Mortis, Squeak, Tara, Nani, Edgar
+∙ Brawl Pass Season 30: SpongeBob! (September)
+∙ Brawl Pass Season 31: Dark Once Upon (October)
+∙ New Seasonal Game Modes and permanent Duels!
+∙ …and much, much more!!!`,
             }
         ]
     },
