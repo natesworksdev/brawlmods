@@ -195,6 +195,19 @@ August 2024 - October 2024
         ]
     },
     {
+        name: "Brawler Maker",
+        shortDescription: "A tool that can automatically create a brawler from start to finish without any modding knowledge required.",
+        tags: ["Utilities"],
+        id: "brawler-maker",
+        description: "Brawler Maker is a python tool that allows even begginers to create their own brawler. To do that, it presents a UI where the user just have to enter information about the brawler, and a playable apk will be automatically generated, with other customisation settings, such as it can be useful for begginers that don't know how to mod, or for more advanced users that just want to make a base brawler.",
+        versions: [
+            {
+                version: "Any",
+                downloadLink: "https://github.com/AngelFireLA/AngelFire-Brawlermaker/releases"
+            }
+        ]
+    },
+    {
         name: "BSL",
         shortDescription: "BSDS ripoff ported to new versions and without battles working.",
         tags: ["Selfhosted"],
