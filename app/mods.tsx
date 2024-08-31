@@ -444,4 +444,16 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
             }
         ]
     },
+    {
+        name: "Hamster Brawl",
+        shortDescription: "A fully functional private server.",
+        tags: ["Private server"],
+        id: "hamster",
+        versions: [
+            {
+                version: "V28",
+                downloadLink: "https://drive.google.com/uc?export=download&id=1WNlX6jEjw2oJUjmzfTjVA9oTHsYBV74j",
+            }
+        ]
+    },
 ];
