@@ -258,18 +258,6 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         ]
     },
     {
-        name: "Rowsor Brawl",
-        shortDescription: "Brawl Stars V28 private server.",
-        tags: ["Private server"],
-        id: "rowsor",
-        versions: [
-            {
-                version: "V28",
-                downloadLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
-            }
-        ]
-    },
-    {
         name: "GioBrawl",
         shortDescription: "Offline version of V29 with new skins and... interesting brawler names.",
         tags: ["Offline"],
