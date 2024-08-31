@@ -503,14 +503,15 @@ August 2024 - October 2024
         tags: ["Private server"],
         id: "hamster",
         description: `
-what works?
+Hamster Brawl is a V28 private server!
+What works?
 
--Road of Glory
--Club
--Shop
--Bot fights
--Ratings
- and much more`,
+- Road of Glory
+- Club
+- Shop
+- Bot fights
+- Ratings
+and much more!`,
         versions: [
             {
                 version: "V28",
