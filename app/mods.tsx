@@ -519,4 +519,16 @@ and much more!`,
             }
         ]
     },
+        {
+        name: "Pirate Offline",
+        shortDescription: "A fully functional V24 offline mod.",
+        tags: ["Private server"],
+        id: "pirate",
+        versions: [
+            {
+                version: "V3.2 (BS V24)",
+                downloadLink: "https://drive.google.com/file/d/19JBTXFFhq05QnU7LWSXrH4rN1PjkU-RM/view?usp=drivesdk",
+            }
+        ]
+    },
 ];
