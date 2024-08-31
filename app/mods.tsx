@@ -169,16 +169,16 @@ From the makers of Clash of Clans, Clash Royale and Boom Beach!`,
                 version: "V57",
                 downloadLink: "https://drive.google.com/file/d/1pAX1XcRuR7dgCJSxwPHFREp0cHHJ-np3/view?usp=sharing",
                 changelog: `
-## UPDATE 57: SPONGEBOB AND MORE!
+### UPDATE 57: SPONGEBOB AND MORE!
 August 2024 - October 2024
 
-∙ New Event: SPONGEBOB Event
-∙ New Brawlers: Moe (Mythic) and Kenji (Legendary)
-∙ Hypercharges: Poco, Mortis, Squeak, Tara, Nani, Edgar
-∙ Brawl Pass Season 30: SpongeBob! (September)
-∙ Brawl Pass Season 31: Dark Once Upon (October)
-∙ New Seasonal Game Modes and permanent Duels!
-∙ …and much, much more!!!`,
+- New Event: SPONGEBOB Event
+- New Brawlers: Moe (Mythic) and Kenji (Legendary)
+- Hypercharges: Poco, Mortis, Squeak, Tara, Nani, Edgar
+- Brawl Pass Season 30: SpongeBob! (September)
+- Brawl Pass Season 31: Dark Once Upon (October)
+- New Seasonal Game Modes and permanent Duels!
+- …and much, much more!!!`,
             }
         ]
     },
