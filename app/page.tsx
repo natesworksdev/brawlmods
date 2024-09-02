@@ -22,12 +22,24 @@ export default function Home() {
   }, [])
 
   const filteredMods = useMemo(() => {
-    return mods.filter(mod =>
-      (mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        mod.shortDescription.toLowerCase().includes(searchTerm.toLowerCase())) &&
-      (selectedTags.length === 0 || selectedTags.every(tag => mod.tags.includes(tag)))
-    )
-  }, [searchTerm, selectedTags])
+  return mods.filter(mod => {
+    const isHidden = mod.tags.includes("Hidden");
+    const isHiddenSelected = selectedTags.includes("Hidden");
+
+    const matchesSearch =
+      mod.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      mod.shortDescription.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesTags =
+      selectedTags.length === 0 || selectedTags.every(tag => mod.tags.includes(tag));
+
+    if (isHidden) {
+      return isHiddenSelected && matchesTags;
+    }
+
+    return matchesSearch && matchesTags;
+  });
+}, [searchTerm, selectedTags]);
+
 
   const toggleTag = (tag: string) => {
     setSelectedTags(prev =>
