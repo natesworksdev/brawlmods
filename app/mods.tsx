@@ -532,7 +532,7 @@ and much more!`,
             }
         ]
     },
-        {
+    {
         name: "Pirate Offline",
         shortDescription: "A fully functional V24 offline mod.",
         tags: ["Offline"],
@@ -541,6 +541,18 @@ and much more!`,
             {
                 version: "V3.2 (BS V24)",
                 downloadLink: "https://drive.google.com/file/d/19JBTXFFhq05QnU7LWSXrH4rN1PjkU-RM/view?usp=drivesdk",
+            }
+        ]
+    },
+    {
+        name: "Rebrawl",
+        shortDescription: "No description availible.",
+        tags: ["Private server"],
+        id: "rebrawl",
+        versions: [
+            {
+                version: "Unknown",
+                downloadLink: "https://drive.google.com/uc?export=download&id=1YQkABsNxr9ppMqDyuJWtxulnA_tIdsRX",
             }
         ]
     },
