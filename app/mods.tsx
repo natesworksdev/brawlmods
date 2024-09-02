@@ -568,4 +568,16 @@ and much more!`,
             }
         ]
     },
+       {
+        name: "Sigma Brawl",
+        shortDescription: "Old movement and OG brawlers!",
+        tags: ["Private server"],
+        id: "brainrot",
+        versions: [
+            {
+                version: "V28",
+                downloadLink: "https://drive.google.com/uc?export=download&id=15Dj2Uhaukvd8L_gZ73uP-N3fCTVOjtYM"
+            }
+        ]
+    },
 ];
