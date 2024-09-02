@@ -547,12 +547,24 @@ and much more!`,
     {
         name: "Rebrawl",
         shortDescription: "The original rebrawl apk. The servers are down so you won't be able to connect.",
-        tags: ["Private server"],
+        tags: ["Private server", "Hidden"],
         id: "rebrawl",
         versions: [
             {
                 version: "V30",
                 downloadLink: "https://drive.google.com/uc?export=download&id=1YQkABsNxr9ppMqDyuJWtxulnA_tIdsRX",
+            }
+        ]
+    },
+    {
+        name: "Rowsor Brawl",
+        shortDescription: "Brawl Stars V28 private server. Servers down so you won't be able to connect.",
+        tags: ["Private server", "Hidden"],
+        id: "rowsor",
+        versions: [
+            {
+                version: "V28",
+                downloadLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
             }
         ]
     },
