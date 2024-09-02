@@ -546,12 +546,12 @@ and much more!`,
     },
     {
         name: "Rebrawl",
-        shortDescription: "No description availible.",
+        shortDescription: "The original rebrawl apk. The servers are down so you won't be able to connect.",
         tags: ["Private server"],
         id: "rebrawl",
         versions: [
             {
-                version: "Unknown",
+                version: "V19",
                 downloadLink: "https://drive.google.com/uc?export=download&id=1YQkABsNxr9ppMqDyuJWtxulnA_tIdsRX",
             }
         ]
