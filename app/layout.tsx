@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Brawl Stars Mods',
   description: 'Explore and download mods for Brawl Stars',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 };
 
 export default function RootLayout({
