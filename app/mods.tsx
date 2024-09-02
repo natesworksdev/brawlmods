@@ -551,7 +551,7 @@ and much more!`,
         id: "rebrawl",
         versions: [
             {
-                version: "V19",
+                version: "V30",
                 downloadLink: "https://drive.google.com/uc?export=download&id=1YQkABsNxr9ppMqDyuJWtxulnA_tIdsRX",
             }
         ]
