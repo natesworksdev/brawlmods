@@ -86,7 +86,10 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         tags: ["Official server"],
         id: "bsd",
         versions: [
-
+            {
+                version: "V57",
+                downloadLink: "https://www.mediafire.com/file/sp0d2qpuoojdcjo/bsd_brawl_v57.325_(26).apk/file"
+            },
             {
                 version: "V56",
                 downloadLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
