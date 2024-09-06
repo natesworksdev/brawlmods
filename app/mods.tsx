@@ -86,6 +86,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         tags: ["Official server"],
         id: "bsd",
         versions: [
+
             {
                 version: "V56",
                 downloadLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
@@ -568,7 +569,7 @@ and much more!`,
             }
         ]
     },
-       {
+    {
         name: "Sigma Brawl",
         shortDescription: "Old movement and OG brawlers!",
         tags: ["Private server"],
@@ -577,6 +578,30 @@ and much more!`,
             {
                 version: "V28",
                 downloadLink: "https://drive.google.com/uc?export=download&id=15Dj2Uhaukvd8L_gZ73uP-N3fCTVOjtYM"
+            }
+        ]
+    },
+    {
+        name: "Hyper Brawl",
+        shortDescription: "V19 private server.",
+        tags: ["Private server"],
+        id: "hyper",
+        versions: [
+            {
+                version: "V19",
+                downloadLink: "https://drive.google.com/file/d/1Uv20bSm88jpoMczJUGH4JCpc3ra2Qoqt/view?usp=sharing"
+            }
+        ]
+    },
+    {
+        name: "RUID",
+        shortDescription: "Based on surge offline v28 has half of all bs skins new brawlers some skills changed and new loading, menu and training ground.",
+        tags: ["Private server"],
+        id: "ruid",
+        versions: [
+            {
+                version: "V20",
+                downloadLink: "https://drive.google.com/uc?export=download&id=19nnBlUXV_CHWiXR9VX1lxIxa_JH3Oy1i"
             }
         ]
     },
