@@ -109,6 +109,10 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         id: "gene",
         versions: [
             {
+                version: "V57",
+                downloadLink: "https://www.mediafire.com/file/isjq1j7j30xpjey/GeneBrawl_v57325_release.apk/file"
+            }
+            {
                 version: "V56",
                 downloadLink: "https://drive.google.com/uc?export=download&id=1IStoE_bUPRq1rkZ9OWE0SF_-oXWYu_8y"
             }
