@@ -120,6 +120,28 @@ export default function DeveloperApplicationForm() {
                   </Select>
                 </div>
 
+                <div className="space-y-2">
+                  <Label htmlFor="discordHandle">Why do you want to become a developer?</Label>
+                  <Input 
+                    type="text" 
+                    id="reason" 
+                    name="reason" 
+                    required 
+                    placeholder="Because I'm sigma"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="discordHandle">Additional Notes</Label>
+                  <Input 
+                    type="text" 
+                    id="notes" 
+                    name="noted" 
+                    required 
+                    placeholder="John is cool"
+                  />
+                </div>
+
                 <Button type="submit" className="w-full">
                   Submit Application
                 </Button>
