@@ -364,7 +364,7 @@ August 2024 - October 2024
     },
     {
         name: "Dimensional Brawl",
-        shortDescription: "Dimensional Brawl is a small mod made on v29 mainly about custom brawlers",
+        shortDescription: "Dimensional Brawl is a small mod made on v29 mainly about custom brawlers.",
         tags: ["Offline"],
         id: "dimensional",
         versions: [
