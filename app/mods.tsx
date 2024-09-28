@@ -210,7 +210,7 @@ August 2024 - October 2024
     },
     {
         name: "Didyro's Brawl Mods",
-        shortDescription: "BSD with custom gradient name and mastery title for Mortis and Crow.",
+        shortDescription: "BSD with custom gradient name and mastery titles for Mortis, Crow, Angelo, Ruffs, Edgar and Kenji.",
         tags: ["Official Server"],
         id: "didyro",
         versions: [
