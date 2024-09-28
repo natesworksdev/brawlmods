@@ -209,6 +209,18 @@ August 2024 - October 2024
         ]
     },
     {
+        name: "Didyro's Brawl Mods",
+        shortDescription: "BSD with custom gradient name and mastery title for Mortis and Crow.",
+        tags: ["Official Server"],
+        id: "didyro",
+        versions: [
+            {
+                version: "First Alpha",
+                downloadLink: "https://www.mediafire.com/file/oyrtoio2ibl4kj6/BSD+Brawl_signed.apk/file"
+            }
+        ]
+    },
+    {
         name: "Brawler Maker",
         shortDescription: "A tool that can automatically create a brawler from start to finish without any modding knowledge required.",
         tags: ["Utilities"],
