@@ -369,7 +369,7 @@ August 2024 - October 2024
         versions: [
             {
                 version: "1.0",
-                changelog: ''**New Brawlers:**
+                changelog: `**New Brawlers:**
 
 PERL
 PHOENIX
@@ -406,7 +406,7 @@ LIGHT VIRUS TECHNO
 - Blaze now have his own super effect + now it can break walls.
 - Loading Screen is fixed.
 - Helen's win animation is changed.
-                '',
+                `,
                 downloadLink: "https://www.mediafire.com/file/4zoy89kjy0xvu1w/Crasher%27s+Brawl_v1.apk/file"
             },
             {
