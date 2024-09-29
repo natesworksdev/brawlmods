@@ -368,7 +368,11 @@ August 2024 - October 2024
         id: "crasher",
         versions: [
             {
-                version: "0.5 (BS V29)",
+                version: "1.0",
+                downloadLinl: "https://www.mediafire.com/file/4zoy89kjy0xvu1w/Crasher%27s+Brawl_v1.apk/file"
+            },
+            {
+                version: "0.5",
                 downloadLink: "https://drive.google.com/uc?export=download&id=1sMNJzJG61x1swTpiYJfISix-fFwx20uP",
                 altDownload: "https://www.mediafire.com/file/ry7k1x0eckdgcr1/Crasher's+Brawl_v0.5.apk/file"
             }
