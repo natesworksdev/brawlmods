@@ -363,13 +363,51 @@ August 2024 - October 2024
     },
     {
         name: "Crasher's Brawl",
-        shortDescription: "Brawl Stars V29 with 11 brand new brawlers!",
+        shortDescription: "Brawl Stars V29 with brand new brawlers, crashcharges(hypercharges remake) and skins!",
         tags: ["Offline"],
         id: "crasher",
         versions: [
             {
                 version: "1.0",
-                downloadLinl: "https://www.mediafire.com/file/4zoy89kjy0xvu1w/Crasher%27s+Brawl_v1.apk/file"
+                changelog: ''**New Brawlers:**
+
+PERL
+PHOENIX
+ROSIE
+WADE
+
+**New Crashcharges:**
+
+HELEN
+TECHNO
+
+**New Skins:**
+
+DIGIVERSE KING PERL
+ELECTRO-HELPER POCKET
+DARK VIRUS TECHNO
+LIGHT VIRUS TECHNO
+
+**Pins:**
+
+- 10 Hagi Pins
+- 1 Helen Pins
+- 7 Pocket Pins
+- 7 Perl Pins
+
+**New Features:**
+
+- Now brawlers have their own portraits.
+- Crashcharges
+- Pins
+
+**Changed/Reworked/Fixed Stuff:**
+
+- Blaze now have his own super effect + now it can break walls.
+- Loading Screen is fixed.
+- Helen's win animation is changed.
+                '',
+                downloadLink: "https://www.mediafire.com/file/4zoy89kjy0xvu1w/Crasher%27s+Brawl_v1.apk/file"
             },
             {
                 version: "0.5",
