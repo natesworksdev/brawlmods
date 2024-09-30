@@ -626,13 +626,13 @@ and much more!`,
     },
     {
         name: "Rowsor Brawl",
-        shortDescription: "Brawl Stars V28 private server. Servers down so you won't be able to connect.",
-        tags: ["Private server", "Hidden"],
+        shortDescription: "Brawl Stars V28 private server.",
+        tags: ["Private server"],
         id: "rowsor",
         versions: [
             {
                 version: "V28",
-                downloadLink: "https://drive.google.com/uc?export=download&id=1s_hO8iL991U3sdyKthqkx7goOtVwxTFJ"
+                downloadLink: "https://www.mediafire.com/file/u7k7bck9csxjwsm/HyperBrawl.apk/file"
             }
         ]
     },
@@ -645,18 +645,6 @@ and much more!`,
             {
                 version: "V28",
                 downloadLink: "https://drive.google.com/uc?export=download&id=15Dj2Uhaukvd8L_gZ73uP-N3fCTVOjtYM"
-            }
-        ]
-    },
-    {
-        name: "Hyper Brawl",
-        shortDescription: "V19 private server.",
-        tags: ["Private server"],
-        id: "hyper",
-        versions: [
-            {
-                version: "V19",
-                downloadLink: "https://drive.google.com/file/d/1Uv20bSm88jpoMczJUGH4JCpc3ra2Qoqt/view?usp=sharing"
             }
         ]
     },
