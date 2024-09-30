@@ -625,10 +625,10 @@ and much more!`,
         ]
     },
     {
-        name: "Rowsor Brawl",
+        name: "Hyper Brawl",
         shortDescription: "Brawl Stars V28 private server.",
         tags: ["Private server"],
-        id: "rowsor",
+        id: "hyper",
         versions: [
             {
                 version: "V28",
