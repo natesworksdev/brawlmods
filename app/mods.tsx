@@ -357,7 +357,7 @@ August 2024 - October 2024
         versions: [
             {
                 version: "V29",
-                downloadLink: "https://drive.google.com/uc?export=download&id=1DH6SOJbjTUAuBAENPhY8Xhuu1tvCqspO"
+                downloadLink: "http://server.natesworks.com/GioBrawl_V2.5.apk"
             }
         ]
     },
@@ -632,7 +632,7 @@ and much more!`,
         versions: [
             {
                 version: "V28",
-                downloadLink: "https://www.mediafire.com/file/u7k7bck9csxjwsm/HyperBrawl.apk/file"
+                downloadLink: "http://server.natesworks.com/HyperBrawl.apk"
             }
         ]
     },
