@@ -660,4 +660,16 @@ and much more!`,
             }
         ]
     },
+    {
+        name: "BM Brawl",
+        shortDescription: "Cursed brawlers and attacks.",
+        tags: ["Offlien"],
+        id: "bm",
+        versions: [
+            {
+                version: "V0.5",
+                downloadLink: "https://www.mediafire.com/file/vkiogtiua35v11u/BM+Brawl_29.258+(1).apk/file"
+            }
+        ]
+    },
 ];
