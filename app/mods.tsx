@@ -651,7 +651,7 @@ and much more!`,
     {
         name: "RUID",
         shortDescription: "Based on surge offline v28 has half of all bs skins new brawlers some skills changed and new loading, menu and training ground.",
-        tags: ["Private server"],
+        tags: ["Private Server"],
         id: "ruid",
         versions: [
             {
@@ -663,7 +663,7 @@ and much more!`,
     {
         name: "BM Brawl",
         shortDescription: "Cursed brawlers and attacks.",
-        tags: ["Offlien"],
+        tags: ["Offline"],
         id: "bm",
         versions: [
             {
