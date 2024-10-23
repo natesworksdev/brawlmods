@@ -672,4 +672,16 @@ and much more!`,
             }
         ]
     },
+    {
+        name: "Cool Brawl",
+        shortDescription: "Collbrawl pour",
+        tags: ["Offline"],
+        id: "collbrawl",
+        versions: [
+            {
+                version: "V1",
+                downloadLink: "https://download.natesworks.com/brawlmods/Cool%20Brawl_v1.0.1.apk"
+            }
+        ]
+    },
 ];
