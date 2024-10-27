@@ -74,7 +74,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         description: `A combination of a multiple Brawl Stars mods.
     Credits: LvL Stars, Oscar Brawl and Emz Brawl Offline.`,
         tags: ["Offline"],
-        id: "magic",
+        id: "allbrawl",
         versions: [
             {
                 version: "First beta",
