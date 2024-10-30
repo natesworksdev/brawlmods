@@ -84,6 +84,32 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         ]
     },
     {
+        name: "Custom Brawl",
+        shortDescription: "A combination of a multiple Brawl Stars mods.",
+        tags: ["Offline"],
+        id: "custom",
+        versions: [
+            {
+                version: "V1.7",
+                downloadLink: "https://download.natesworks.com/brawlmods/custombrawl.ipa",
+                altDownload: "https://www.mediafire.com/file/17sz0za6ghvrwrs/Custom_Brawl_V1.7.ipa/file"
+            }
+        ]
+    },
+    {
+        name: "Sroyzi Brawl",
+        shortDescription: "",
+        tags: ["Offline"],
+        id: "sroyzi",
+        versions: [
+            {
+                version: "V1",
+                downloadLink: "https://download.natesworks.com/brawlmods/sroyzibrawl.ipa",
+                altDownload: "https://kshk.floyzi.ru/SroyziBrawl"
+            }
+        ]
+    },
+    {
         name: "Retro Brawl",
         shortDescription: "Retro Brawl is the old version of Brawl Stars (2018). Online battles, 21 characters and star powers for them, clans, etc. are available on the server. Feel better times, from the old menu to the atmosphere!",
         tags: ["Private server", "Supports iOS"],
@@ -689,7 +715,7 @@ and much more!`,
     },
     {
         name: "Cool Brawl",
-        shortDescription: "Collbrawl pour",
+        shortDescription: "Cool menu, new brawlers, skins and more!",
         tags: ["Offline"],
         id: "collbrawl",
         versions: [
