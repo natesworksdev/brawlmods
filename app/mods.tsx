@@ -86,7 +86,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Custom Brawl",
         shortDescription: "A combination of a multiple Brawl Stars mods.",
-        tags: ["Offline"],
+        tags: ["Offline", "Supports iOS"],
         id: "custom",
         versions: [
             {
@@ -98,8 +98,8 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     },
     {
         name: "Sroyzi Brawl",
-        shortDescription: "",
-        tags: ["Offline"],
+        shortDescription: "Moddable V1 for iOS.",
+        tags: ["Offline", "Support iOS"],
         id: "sroyzi",
         versions: [
             {
