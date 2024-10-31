@@ -65,7 +65,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
                 version: "V43",
                 downloadLink: "https://files.magic-servers.xyz/mb.apk",
                 // altDownload: "https://drive.google.com/uc?export=download&id=1Ze3Nt3fU212WbCk8M7n9XKwDm910WVTg"
-                altDownload: "https://download.natesworks.com/brawlmods/mb.apk
+                altDownload: "https://download.natesworks.com/brawlmods/mb.apk"
             },
             {
                 version: "V43 for iOS",
