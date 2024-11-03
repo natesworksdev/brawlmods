@@ -37,9 +37,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         tags: ["Private server", "Supports iOS"],
         id: "nulls",
         versions: [
-            {
 
-            }
             {
                 version: "V58 for Android",
                 downloadLink: "https://dnull.xyz/latest_bs",
