@@ -121,7 +121,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
             {
                 version: "V12 for Android",
                 downloadLink: "https://files.magic-servers.xyz/retrobrawl.apk",
-                altDownload: "https://drive.google.com/uc?export=download&id=1cTyA1pg-5UxAcdN4-WEPIiStSQM5Ogsx"
+                altDownload: "https://download.natesworks.com/brawlmods/retrobrawl.apk"
             },
             {
                 version: "V12 for iOS",
@@ -164,8 +164,8 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     },
     {
         name: "Supercell Jailbreak",
-        shortDescription: "Official ipas, but without the annoying crash of the jailbreak detection.",
-        tags: ["Official server", "Supports iOS"],
+        shortDescription: "DISCONTINUED: Official ipas, but without the annoying crash of the jailbreak detection.",
+        tags: ["Official server", "Supports iOS", "Hidden"],
         id: "jailbreak",
         versions: [
             {
@@ -248,7 +248,7 @@ August 2024 - October 2024
         versions: [
             {
                 version: "V28",
-                downloadLink: "https://drive.google.com/uc?export=download&id=1fxULYszSieEy3JkTW10E-ArK5LEmMBEK"
+                downloadLink: "https://download.natesworks.com/brawlmods/surgeoffline.apk"
             }
         ]
     },
@@ -279,9 +279,9 @@ August 2024 - October 2024
     },
     {
         name: "BSL",
-        shortDescription: "BSDS ripoff ported to new versions and without battles working.",
+        shortDescription: "BSDS based private server.",
         tags: ["Selfhosted"],
-        id: "bslsucks",
+        id: "bsl",
         versions: [
             {
                 version: "V53 Server",
