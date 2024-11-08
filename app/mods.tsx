@@ -137,12 +137,9 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         id: "bsd",
         versions: [
             {
-                version: "V57",
-                downloadLink: "https://www.mediafire.com/file/sp0d2qpuoojdcjo/bsd_brawl_v57.325_(26).apk/file"
-            },
-            {
-                version: "V56",
-                downloadLink: "https://drive.google.com/uc?export=download&id=17LsS_wizr9CZ2Yo0oqWFU5PWpMDltjib"
+                version: "V58",
+                downloadLink: "https://download.natesworks.com/brawlmods/bsdbrawl/bsd_brawl_v58.279_(27).apk",
+                altDownload: "https://storage.bsdbrawl.com/bsd_brawl_v58.279_(27).apk"
             }
         ]
     },
