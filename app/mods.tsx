@@ -53,7 +53,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Magic Brawl",
         shortDescription: "Magic Brawl is the rebirth of Brawl Stars and its best times! All content is available on the server: online battles, all the characters and everything. By downloading this server, you can get great pleasure from the updates, because we update the server every month!",
-        tags: ["Private server", "Support iOS"],
+        tags: ["Private server", "Supports iOS"],
         id: "magic",
         versions: [
             {
@@ -102,7 +102,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Sroyzi Brawl",
         shortDescription: "Moddable V1 for iOS.",
-        tags: ["Offline", "Support iOS"],
+        tags: ["Offline", "Supports iOS"],
         id: "sroyzi",
         versions: [
             {
@@ -133,7 +133,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "BSD Brawl",
         shortDescription: "Allows changing server region, viewing enemies ammo and more!",
-        tags: ["Official server"],
+        tags: ["Official Server"],
         id: "bsd",
         versions: [
             {
@@ -146,7 +146,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Gene Brawl",
         shortDescription: "Adds a debug menu allowing you to visually unlock all brawlers and more!",
-        tags: ["Official server"],
+        tags: ["Official Server"],
         id: "gene",
         versions: [
             {
@@ -162,7 +162,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Supercell Jailbreak",
         shortDescription: "DISCONTINUED: Official ipas, but without the annoying crash of the jailbreak detection.",
-        tags: ["Official server", "Supports iOS", "Hidden"],
+        tags: ["Official Server", "Supports iOS", "Hidden"],
         id: "jailbreak",
         versions: [
             {
@@ -175,7 +175,7 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
     {
         name: "Brawl Stars",
         shortDescription: "Unmodified official game. Must be installed using SAI (Split Apk Installer)!",
-        tags: ["Official server"],
+        tags: ["Official Server"],
         id: "bs",
         description: `
 3v3 and Battle Royale
