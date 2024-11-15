@@ -303,6 +303,19 @@ August 2024 - October 2024
         ]
     },
     {
+        name: "Golden Apple Brawl",
+        shortDescription: "Golden Apple Brawl or GApple Brawl. This mod will update eventually until every brawler will ve customized! Brawlers that have red eyes, and are mythic rarity are modified Brawlers! Modified Brawlers have Custom descriptions about updated versions of them! Hope you enjoy bye!",
+        description: "It's a mod that every update brawlers will update! Every update it will have modified OG Brawlers! The brawlers that have red eyes and are mythic rarity are the modified brawlers! Have fun!",
+        tags: ["Offline"],
+        id: "gapple",
+        versions: [
+            {
+                version: "V1",
+                downloadLink: "https://download.natesworks.com/brawlmods/GApple1_mod.apk"
+            }
+        ]
+    },
+    {
         name: "BSDS",
         shortDescription: "Selfhost your own private server with working battles.",
         tags: ["Selfhosted"],
