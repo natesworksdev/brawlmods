@@ -18,6 +18,34 @@ interface Mod {
 
 export const mods: Mod[] = [
     {
+        name: "Arch Brawl",
+        shortDescription: "V31 Android and iOS Private Server!",
+        description: `V31 Android and iOS Private Server
+📺 What's inside?
+
+😁 Brawler until amber
+🏆 Working trophy road 
+🎫 Brawl pass 
+📩 Clubs`,
+        tags: ["Private server", "Supports iOS"],
+        id: "archbtw",
+        versions: [
+            {
+                version: "V31",
+                downloadLink: "https://download.natesworks.com/brawlmods/arch/archbrawl.apk",
+                // altDownload: "https://drive.google.com/uc?export=download&id=1Ze3Nt3fU212WbCk8M7n9XKwDm910WVTg"
+                altDownload: "https://t.me/archbrawl"
+            },
+            {
+                version: "V31 for iOS",
+                downloadLink: "https://download.natesworks.com/brawlmods/arch/archbrawl.apk",
+                // altDownload: "https://drive.google.com/uc?export=download&id=1Ze3Nt3fU212WbCk8M7n9XKwDm910WVTg"
+                altDownload: "https://t.me/archbrawl"
+            },
+            
+        ]
+    },
+    {
         name: "Nulls Brawl",
         description: `
 ## Unlimited resources
