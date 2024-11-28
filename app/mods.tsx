@@ -72,21 +72,6 @@ We are trying to add new brawlers and features as fast as possible. Sometimes it
         ]
     },
     {
-        name: "All Brawl",
-        shortDescription: "A combination of a multiple Brawl Stars mods.",
-        description: `A combination of a multiple Brawl Stars mods.
-    Credits: LvL Stars, Oscar Brawl and Emz Brawl Offline.`,
-        tags: ["Offline"],
-        id: "allbrawl",
-        versions: [
-            {
-                version: "First beta",
-                downloadLink: "https://download.natesworks.com/brawlmods/allbrawl/allbrawl-beta1.apk",
-                altDownload: "https://www.mediafire.com/file/lud65c2wfits0pz/allbrawl-beta1.apk/file"
-            }
-        ]
-    },
-    {
         name: "Custom Brawl",
         shortDescription: "A combination of a multiple Brawl Stars mods.",
         tags: ["Offline", "Supports iOS"],
